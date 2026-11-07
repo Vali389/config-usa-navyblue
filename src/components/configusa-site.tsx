@@ -269,30 +269,39 @@ export function HomeView() {
         {/* Supporting Trust Points Ribbon */}
         <TrustRibbon />
 
-        {/* SECTION 2 — WHO WE ARE */}
-        <section className="py-10 sm:py-14 lg:py-16 bg-background">
+        {/* SECTION 2 — OUR COMPANY (WHO WE ARE) */}
+        <section className="py-12 sm:py-16 bg-background">
           <div className="mx-auto grid max-w-[1380px] gap-10 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16 lg:px-12">
-            <div className="relative min-h-[320px] sm:min-h-[420px] overflow-hidden rounded-xl shadow-md border border-border bg-slate-900">
+            <div className="relative min-h-[340px] sm:min-h-[440px] overflow-hidden rounded-2xl shadow-xl border border-border bg-slate-900 group">
               <img
                 src="/assets/who-we-are.jpg"
                 alt="ConfigUSA enterprise leadership team in strategic client consultation"
                 width={1600}
-                height={960}
+                height={1067}
                 loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover object-center filter brightness-[1.12] contrast-[1.02] saturate-[1.05]"
+                className="absolute inset-0 h-full w-full object-cover object-center filter brightness-[1.05] contrast-[1.02] transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute bottom-0 left-0 bg-gold px-5 py-3.5 text-xs sm:text-sm font-semibold text-gold-foreground shadow-lg rounded-tr-lg">
-                People. Technology. Partnership.
+              <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
+              <div className="absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 rounded-lg border border-white/20 bg-primary/90 backdrop-blur-md p-3.5 text-white shadow-xl">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-gold/20 text-gold">
+                    <Award className="h-4 w-4" />
+                  </span>
+                  <div>
+                    <p className="text-xs font-semibold tracking-wide text-gold uppercase">Enterprise Delivery</p>
+                    <p className="text-xs text-white/85">People · Technology · Partnership</p>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">WHO WE ARE</p>
-              <h2 className="mt-2 font-display text-3xl font-bold leading-tight text-primary sm:text-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">OUR COMPANY</p>
+              <h2 className="mt-2 font-display text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-[40px]">
                 Your Strategic Partner in Technology Talent and Workforce Solutions
               </h2>
 
-              <div className="mt-4 space-y-3 text-sm sm:text-base leading-relaxed text-muted-foreground">
+              <div className="mt-5 space-y-3.5 text-sm sm:text-base leading-relaxed text-muted-foreground">
                 <p>
                   In today's rapidly evolving business environment, access to the right expertise is essential to achieving business objectives.
                 </p>
@@ -300,20 +309,20 @@ export function HomeView() {
                   ConfigUSA partners with organizations to address complex workforce challenges through specialized IT staffing, enterprise technology talent, and flexible workforce solutions.
                 </p>
                 <p>
-                  Our approach combines an understanding of client requirements, disciplined talent acquisition, and a commitment to consistent delivery. Whether supporting enterprise transformation initiatives, critical technology programs, or ongoing workforce needs, we focus on connecting businesses with professionals who can make a meaningful difference.
+                  Our approach combines an understanding of client requirements, disciplined talent acquisition, and a commitment to consistent delivery across the United States, India, and Canada.
                 </p>
               </div>
 
-              <blockquote className="mt-4 border-l-2 border-gold pl-4 py-1 text-sm sm:text-base font-semibold text-primary">
+              <blockquote className="mt-5 border-l-2 border-gold pl-4 py-1 text-sm sm:text-base font-semibold text-primary">
                 We don't simply fill positions. We help organizations build the teams that move business forward.
               </blockquote>
 
-              <div className="mt-5">
+              <div className="mt-6">
                 <Link
                   to="/about"
                   className="inline-flex items-center gap-2 border-b border-gold pb-1 text-sm font-semibold text-primary hover:text-slate-brand transition-colors"
                 >
-                  More about ConfigUSA
+                  Explore our company history and leadership
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </div>
@@ -556,6 +565,19 @@ export function HomeView() {
                 </div>
               </div>
             </div>
+
+            <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-border pt-6">
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Explore our specialized delivery frameworks, client partnerships, and compliance rigor.
+              </p>
+              <Link
+                to="/why-configusa"
+                className="inline-flex items-center gap-2 border-b border-gold pb-1 text-sm font-semibold text-primary hover:text-slate-brand transition-colors shrink-0"
+              >
+                Learn why clients choose ConfigUSA
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -735,6 +757,82 @@ export function HomeView() {
                   <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
                     Coordinated operational capabilities in the United States, India, and Canada ensuring round-the-clock sourcing, technical screening, and delivery execution.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* HOMEPAGE CAREERS SPOTLIGHT */}
+        <section className="py-12 sm:py-16 bg-[#F8F9F7]/70 dark:bg-muted/10 border-t border-border">
+          <div className="mx-auto grid max-w-[1280px] gap-10 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16 lg:px-12">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
+                JOIN OUR TALENT COMMUNITY
+              </p>
+              <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-[42px] font-normal leading-[1.18] text-primary">
+                Your Skills. Your Ambition.<br className="hidden sm:inline" /> Your Next Opportunity.
+              </h2>
+              <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground">
+                ConfigUSA connects specialized consultants and software professionals with high-impact technology programs across Fortune 500 accounts, fast-scaling digital leaders, and global enterprise transformation teams.
+              </p>
+
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-foreground/90">
+                <div className="flex items-center gap-2.5 rounded-md border border-border bg-card p-3 shadow-sm">
+                  <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
+                  <span>Enterprise SAP & Workday Roles</span>
+                </div>
+                <div className="flex items-center gap-2.5 rounded-md border border-border bg-card p-3 shadow-sm">
+                  <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
+                  <span>Cloud & Infrastructure Architecture</span>
+                </div>
+                <div className="flex items-center gap-2.5 rounded-md border border-border bg-card p-3 shadow-sm">
+                  <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
+                  <span>AI, Machine Learning & Data Platforms</span>
+                </div>
+                <div className="flex items-center gap-2.5 rounded-md border border-border bg-card p-3 shadow-sm">
+                  <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
+                  <span>Full-Stack & Microservices Engineering</span>
+                </div>
+              </div>
+
+              <div className="mt-7 flex flex-wrap items-center gap-3.5">
+                <Link
+                  to="/careers"
+                  className="inline-flex h-11 items-center justify-center gap-2 rounded-[4px] bg-gold px-6 text-sm font-semibold text-primary shadow-sm hover:shadow-md transition-all hover:bg-gold/90"
+                >
+                  Explore Careers at ConfigUSA
+                  <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+                <Link
+                  to="/careers#submit-resume"
+                  className="inline-flex h-11 items-center justify-center gap-2 rounded-[4px] border border-border bg-background px-6 text-sm font-semibold text-primary shadow-sm hover:bg-secondary transition-colors"
+                >
+                  Submit Your Resume
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative min-h-[340px] sm:min-h-[420px] overflow-hidden rounded-2xl shadow-xl border border-border bg-slate-900 group">
+              <img
+                src="/assets/hero-careers-clean.jpg"
+                alt="ConfigUSA technology consultants and software professionals collaborating"
+                width={1600}
+                height={1067}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover object-center filter brightness-[1.05] contrast-[1.02] transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
+              <div className="absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 rounded-lg border border-white/20 bg-primary/90 backdrop-blur-md p-3.5 text-white shadow-xl">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-gold/20 text-gold">
+                    <Users className="h-4 w-4" />
+                  </span>
+                  <div>
+                    <p className="text-xs font-semibold tracking-wide text-gold uppercase">Active Talent Community</p>
+                    <p className="text-xs text-white/80">Direct client placements · United States · India · Canada</p>
+                  </div>
                 </div>
               </div>
             </div>

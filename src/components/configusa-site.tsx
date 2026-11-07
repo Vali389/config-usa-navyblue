@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -41,6 +42,152 @@ import {
   industryList,
   globalHubs,
 } from "@/lib/configusa-content";
+
+const homeIndustries = [
+  {
+    id: "financial-services",
+    name: "Financial Services",
+    icon: Landmark,
+    image: "/assets/ind-financial.jpg",
+    alt: "ConfigUSA Financial Services technology specialists and compliance consultants",
+    highlight: "Banking, FinTech, risk management & regulatory compliance talent",
+  },
+  {
+    id: "government-public-sector",
+    name: "Government & Public Sector",
+    icon: Building2,
+    image: "/assets/ind-government.jpg",
+    alt: "ConfigUSA public sector modernization engineers and program specialists",
+    highlight: "FedRAMP cloud modernization, SAM.gov registered & E-Verify verified talent",
+  },
+  {
+    id: "technology-digital-services",
+    name: "Technology & Digital Services",
+    icon: Briefcase,
+    image: "/assets/ind-technology.jpg",
+    alt: "ConfigUSA specialized technology and software engineering professionals",
+    highlight: "Full-stack cloud engineering, generative AI pipelines & microservices",
+  },
+  {
+    id: "healthcare",
+    name: "Healthcare & Life Sciences",
+    icon: HeartPulse,
+    image: "/assets/ind-healthcare.jpg",
+    alt: "ConfigUSA healthcare digital systems and clinical platform integration specialists",
+    highlight: "HIPAA-compliant EHR, clinical data systems & digital health platforms",
+  },
+  {
+    id: "manufacturing-engineering",
+    name: "Manufacturing & Engineering",
+    icon: Cpu,
+    image: "/assets/ind-manufacturing.jpg",
+    alt: "ConfigUSA manufacturing operations and industrial technology engineers",
+    highlight: "Industrial IoT, smart factory automation & SAP S/4HANA supply chain workflows",
+  },
+];
+
+function HomeIndustryExperience() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeIndustry = homeIndustries[activeIndex] ?? homeIndustries[0];
+
+  return (
+    <section className="py-12 sm:py-16 lg:py-20 bg-background">
+      <div className="mx-auto grid max-w-[1280px] gap-10 px-5 sm:px-8 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-16 lg:px-12">
+        {/* Left: Clean Executive Industry Photography Showcase with Smooth Fade & Spec Badge */}
+        <div className="relative min-h-[380px] sm:min-h-[440px] lg:min-h-[490px] overflow-hidden shadow-xl border border-border rounded-2xl bg-slate-900 group">
+          <img
+            key={activeIndustry.id}
+            src={activeIndustry.image}
+            alt={activeIndustry.alt}
+            loading="lazy"
+            width={1600}
+            height={1067}
+            className="absolute inset-0 h-full w-full object-cover object-center filter brightness-[1.05] contrast-[1.02] transition-all duration-500 group-hover:scale-105"
+          />
+          {/* Subtle gradient overlay at bottom */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
+
+          {/* Floating Glass Spec Badge */}
+          <div className="absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 rounded-lg border border-white/20 bg-primary/90 backdrop-blur-md p-3.5 text-white shadow-xl transition-all">
+            <div className="flex items-center gap-3">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-gold/20 text-gold">
+                <activeIndustry.icon className="h-4 w-4" />
+              </span>
+              <div className="min-w-0">
+                <p className="text-xs font-semibold tracking-wide text-gold uppercase">
+                  {activeIndustry.name}
+                </p>
+                <p className="truncate text-xs text-white/80">
+                  {activeIndustry.highlight}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right: Content & Single-Column Clean List matching Reference */}
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
+            INDUSTRY EXPERIENCE
+          </p>
+          <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-[42px] font-normal leading-[1.18] text-primary">
+            Expertise aligned with the<br className="hidden sm:inline" /> industries we serve.
+          </h2>
+          <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground">
+            From regulated environments to fast-moving technology organizations, we align talent to the context that matters.
+          </p>
+
+          <div className="mt-7 space-y-0 border-t border-border/80">
+            {homeIndustries.map((ind, idx) => {
+              const isActive = activeIndex === idx;
+              const Icon = ind.icon;
+              return (
+                <div
+                  key={ind.id}
+                  onMouseEnter={() => setActiveIndex(idx)}
+                  className={`group flex items-center justify-between border-b border-border/80 py-3.5 px-3 -mx-3 rounded-md transition-all cursor-pointer ${
+                    isActive
+                      ? "bg-slate-100/90 dark:bg-slate-800/60 text-primary font-semibold"
+                      : "text-foreground/90 hover:bg-slate-50 dark:hover:bg-slate-900/40 hover:text-primary"
+                  }`}
+                >
+                  <Link
+                    to={`/industries#${ind.id}`}
+                    className="flex flex-1 items-center gap-3.5 text-sm font-medium transition-colors"
+                  >
+                    <Icon
+                      className={`h-4 w-4 shrink-0 transition-colors ${
+                        isActive ? "text-gold" : "text-slate-brand group-hover:text-gold"
+                      }`}
+                      aria-hidden="true"
+                    />
+                    <span className={isActive ? "text-primary font-semibold" : ""}>{ind.name}</span>
+                  </Link>
+                  <Link
+                    to={`/industries#${ind.id}`}
+                    className="text-xs text-muted-foreground group-hover:text-primary transition-colors flex items-center gap-1"
+                  >
+                    <ArrowRight className={`h-3.5 w-3.5 transition-transform ${isActive ? "text-gold translate-x-1" : "text-muted-foreground group-hover:translate-x-1"}`} />
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-8">
+            <Link
+              to="/industries"
+              className="inline-flex items-center gap-2 border-b border-gold pb-1 text-sm font-semibold text-primary hover:text-slate-brand transition-colors"
+            >
+              Explore industry expertise
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 /* =========================================================================
    1. HOMEPAGE VIEW (ALL 9 SECTIONS + CREDENTIALS)
@@ -466,83 +613,8 @@ export function HomeView() {
           </div>
         </section>
 
-        {/* SECTION 6 — INDUSTRIES WE SERVE (MATCHING REFERENCE IMAGE 2) */}
-        <section className="py-10 sm:py-14 lg:py-16 bg-background">
-          <div className="mx-auto grid max-w-[1280px] gap-10 px-5 sm:px-8 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-16 lg:px-12">
-            {/* Left: Cross-Industry Technology & Engineering Operations */}
-            <div className="relative min-h-[380px] sm:min-h-[460px] lg:min-h-[490px] overflow-hidden shadow-lg border border-border rounded-xl bg-slate-900">
-              <img
-                src="/assets/industry-experience-alt.jpg"
-                alt="ConfigUSA specialized cross-industry technology consultants and enterprise systems specialists"
-                loading="lazy"
-                width={1600}
-                height={960}
-                className="absolute inset-0 h-full w-full object-cover object-center filter brightness-[1.08] contrast-[1.03] transition-transform duration-700 hover:scale-105"
-              />
-            </div>
-
-            {/* Right: Content & 2-Column Industry List */}
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">
-                INDUSTRY EXPERIENCE
-              </p>
-              <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-[42px] font-normal leading-[1.18] text-primary">
-                Expertise aligned with the industries we serve.
-              </h2>
-              <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground">
-                From regulated environments to fast-moving technology organizations, we align talent to the context that matters.
-              </p>
-
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-0">
-                <Link
-                  to="/industries#financial-services"
-                  className="flex items-center gap-3 border-b border-border py-3.5 text-sm font-medium text-primary hover:text-slate-brand transition-colors"
-                >
-                  <Landmark className="h-4 w-4 shrink-0 text-slate-brand" aria-hidden="true" />
-                  <span>Financial Services</span>
-                </Link>
-                <Link
-                  to="/industries#healthcare"
-                  className="flex items-center gap-3 border-b border-border py-3.5 text-sm font-medium text-primary hover:text-slate-brand transition-colors"
-                >
-                  <HeartPulse className="h-4 w-4 shrink-0 text-slate-brand" aria-hidden="true" />
-                  <span>Healthcare</span>
-                </Link>
-                <Link
-                  to="/industries#government-public-sector"
-                  className="flex items-center gap-3 border-b border-border py-3.5 text-sm font-medium text-primary hover:text-slate-brand transition-colors"
-                >
-                  <Building2 className="h-4 w-4 shrink-0 text-slate-brand" aria-hidden="true" />
-                  <span>Government & Public Sector</span>
-                </Link>
-                <Link
-                  to="/industries#manufacturing-engineering"
-                  className="flex items-center gap-3 border-b border-border py-3.5 text-sm font-medium text-primary hover:text-slate-brand transition-colors"
-                >
-                  <Cpu className="h-4 w-4 shrink-0 text-slate-brand" aria-hidden="true" />
-                  <span>Manufacturing & Engineering</span>
-                </Link>
-                <Link
-                  to="/industries#technology-digital-services"
-                  className="flex items-center gap-3 border-b border-border py-3.5 text-sm font-medium text-primary hover:text-slate-brand transition-colors sm:col-span-2"
-                >
-                  <Briefcase className="h-4 w-4 shrink-0 text-slate-brand" aria-hidden="true" />
-                  <span>Technology & Digital Services</span>
-                </Link>
-              </div>
-
-              <div className="mt-6">
-                <Link
-                  to="/industries"
-                  className="inline-flex items-center gap-2 border-b border-gold pb-1 text-sm font-semibold text-primary hover:text-slate-brand transition-colors"
-                >
-                  Explore industry expertise
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* SECTION 6 — INDUSTRIES WE SERVE (MATCHING REFERENCE IMAGE) */}
+        <HomeIndustryExperience />
 
         {/* SECTION 7 — GLOBAL PRESENCE */}
         <section className="bg-secondary/60 py-10 sm:py-14 lg:py-16 border-y border-border">

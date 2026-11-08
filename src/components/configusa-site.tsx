@@ -31,6 +31,7 @@ import { CredentialsSection } from "./CredentialsSection";
 import { InquiryForm } from "./InquiryForm";
 import { CareersExplorer } from "./CareersExplorer";
 import { PageHero } from "./PageHero";
+import { InteractiveGlobalMap } from "./InteractiveGlobalMap";
 
 import heroImage from "@/assets/configusa-corporate-hero.jpg";
 import platformImage from "@/assets/enterprise-platforms.jpg";
@@ -2129,6 +2130,26 @@ export function GlobalPresenceView() {
           </div>
         </section>
 
+        {/* Global Interactive Map Section */}
+        <section className="border-t border-border bg-slate-50/50 py-12 sm:py-16">
+          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+            <div className="mb-8">
+              <div className="flex items-center gap-2.5 mb-2">
+                <span className="text-sm sm:text-base font-extrabold uppercase tracking-wider text-primary">GLOBAL DELIVERY NETWORK</span>
+                <span className="w-10 h-[3px] bg-gold" />
+              </div>
+              <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">
+                Interactive Global Locations Map
+              </h3>
+              <p className="mt-2 max-w-2xl text-sm sm:text-base text-muted-foreground">
+                Select any office location to explore coordinates, local operational hours, and direct enterprise contact channels.
+              </p>
+            </div>
+
+            <InteractiveGlobalMap />
+          </div>
+        </section>
+
         <CredentialsSection />
       </main>
       <SiteFooter />
@@ -2288,28 +2309,28 @@ export function ContactView() {
                   {/* US Desk */}
                   <div className="rounded-sm border border-border bg-card p-5 shadow-sm">
                     <span className="text-xs font-semibold uppercase text-gold">United States (Global Headquarters)</span>
-                    <h3 className="mt-1 font-display text-lg font-bold text-primary">ConfigUSA</h3>
-                    <p className="mt-2 text-xs text-muted-foreground">666 Plainsboro Road, Suite 1237, Plainsboro, NJ 08536</p>
-                    <p className="mt-1 text-xs text-foreground font-mono">Direct: +1 (609) 934-3184</p>
-                    <p className="text-xs text-slate-brand">contact@config-usa.com</p>
+                    <h3 className="mt-1 font-display text-lg font-bold text-primary">ConfigUSA (Global Headquarters)</h3>
+                    <p className="mt-2 text-xs text-muted-foreground">666 Plainsboro Road, Suite 1237, Plainsboro, NJ 08536, United States</p>
+                    <p className="mt-1 text-xs text-foreground font-mono">Phone: +1 (609) 934-3184</p>
+                    <p className="text-xs text-slate-brand">Email: usa@configusa.com</p>
                   </div>
 
                   {/* Canada Desk */}
                   <div className="rounded-sm border border-border bg-card p-5 shadow-sm">
-                    <span className="text-xs font-semibold uppercase text-gold">Canada (North America Hub)</span>
-                    <h3 className="mt-1 font-display text-lg font-bold text-primary">Accurate Systems Integrators Inc.</h3>
-                    <p className="mt-2 text-xs text-muted-foreground">1585 Markham Road, Suite # 309, Toronto, ON M1B 2W1</p>
-                    <p className="mt-1 text-xs text-foreground font-mono">Direct: +1 (647) 557-6968</p>
-                    <p className="text-xs text-slate-brand">canada@config-usa.com</p>
+                    <span className="text-xs font-semibold uppercase text-gold">Canada (Canada Office)</span>
+                    <h3 className="mt-1 font-display text-lg font-bold text-primary">ConfigUSA (Canada Office)</h3>
+                    <p className="mt-2 text-xs text-muted-foreground">1585 Markham Road, Suite # 309, Toronto, ON M1B 2W1, Canada</p>
+                    <p className="mt-1 text-xs text-foreground font-mono">Phone: +1 (647) 557-6968</p>
+                    <p className="text-xs text-slate-brand">Email: canada@configusa.com</p>
                   </div>
 
                   {/* India Desk */}
                   <div className="rounded-sm border border-border bg-card p-5 shadow-sm">
-                    <span className="text-xs font-semibold uppercase text-gold">India (Delivery & Engineering Center)</span>
-                    <h3 className="mt-1 font-display text-lg font-bold text-primary">Config Solutions Private Limited</h3>
-                    <p className="mt-2 text-xs text-muted-foreground">Trendz Sapphire, 3rd Floor, Vittal Rao Nagar, Madhapur, Hitech City, Hyderabad – 500081</p>
-                    <p className="mt-1 text-xs text-foreground font-mono">Direct: +91 80746 83380</p>
-                    <p className="text-xs text-slate-brand">india@config-usa.com</p>
+                    <span className="text-xs font-semibold uppercase text-gold">India (India Delivery Center)</span>
+                    <h3 className="mt-1 font-display text-lg font-bold text-primary">ConfigUSA (India Delivery Center)</h3>
+                    <p className="mt-2 text-xs text-muted-foreground">Trendz Sapphire, 3rd Floor, Flat No. 1-99/V/2, Vittal Rao Nagar, Madhapur, Hitech City, Hyderabad – 500081, Telangana, India</p>
+                    <p className="mt-1 text-xs text-foreground font-mono">Phone: +91 80746 83380</p>
+                    <p className="text-xs text-slate-brand">Email: india@configusa.com</p>
                   </div>
                 </div>
 
@@ -2328,6 +2349,26 @@ export function ContactView() {
                 />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Global Interactive Map Section matching reference site */}
+        <section className="border-t border-border bg-slate-50/50 py-12 sm:py-16">
+          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+            <div className="mb-8">
+              <div className="flex items-center gap-2.5 mb-2">
+                <span className="text-sm sm:text-base font-extrabold uppercase tracking-wider text-primary">GLOBAL MAP</span>
+                <span className="w-10 h-[3px] bg-gold" />
+              </div>
+              <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">
+                Interactive Global Locations Map
+              </h3>
+              <p className="mt-2 max-w-2xl text-sm sm:text-base text-muted-foreground">
+                Explore ConfigUSA's operational delivery centers, regional executive offices, and direct contact details across the United States, Canada, and India.
+              </p>
+            </div>
+
+            <InteractiveGlobalMap />
           </div>
         </section>
 

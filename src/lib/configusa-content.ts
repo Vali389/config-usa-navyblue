@@ -327,14 +327,14 @@ export const globalHubs: GlobalHub[] = [
       "Executive client engagement and nationwide operational delivery",
     ],
     contactDetails: {
-      address: "666 Plainsboro Road, Suite 1237, Plainsboro, NJ 08536",
+      address: "666 Plainsboro Road, Suite 1237, Plainsboro, NJ 08536, United States",
       phone: "+1 (609) 934-3184",
-      email: "contact@config-usa.com",
+      email: "usa@configusa.com",
     },
   },
   {
     country: "Canada",
-    entityName: "Accurate Systems Integrators Inc. (North America Hub)",
+    entityName: "ConfigUSA (Canada Office)",
     role: "Technology Staffing & Regional North American Business Support",
     focus: [
       "Canadian enterprise IT staffing and cross-border project augmentation",
@@ -343,14 +343,14 @@ export const globalHubs: GlobalHub[] = [
       "Integrated North American delivery coordination with US operations",
     ],
     contactDetails: {
-      address: "1585 Markham Road, Suite # 309, Toronto, ON M1B 2W1",
+      address: "1585 Markham Road, Suite # 309, Toronto, ON M1B 2W1, Canada",
       phone: "+1 (647) 557-6968",
-      email: "canada@config-usa.com",
+      email: "canada@configusa.com",
     },
   },
   {
     country: "India",
-    entityName: "Config Solutions Private Limited (Delivery & Engineering Center)",
+    entityName: "ConfigUSA (India Delivery Center)",
     role: "Technology Recruiting, Workforce Delivery & Global Sourcing",
     focus: [
       "Round-the-clock technical sourcing and qualification engine",
@@ -359,9 +359,9 @@ export const globalHubs: GlobalHub[] = [
       "Rigorous technical candidate screening and interview coordination",
     ],
     contactDetails: {
-      address: "Trendz Sapphire, 3rd Floor, Vittal Rao Nagar, Madhapur, Hitech City, Hyderabad – 500081",
+      address: "Trendz Sapphire, 3rd Floor, Flat No. 1-99/V/2, Vittal Rao Nagar, Madhapur, Hitech City, Hyderabad – 500081, Telangana, India",
       phone: "+91 80746 83380",
-      email: "india@config-usa.com",
+      email: "india@configusa.com",
     },
   },
 ];

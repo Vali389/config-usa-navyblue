@@ -129,8 +129,8 @@ export function SiteFooter() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
-                <a href="mailto:contact@config-usa.com" className="hover:text-gold transition-colors">
-                  contact@config-usa.com
+                <a href="mailto:usa@configusa.com" className="hover:text-gold transition-colors">
+                  usa@configusa.com
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
@@ -157,11 +157,11 @@ export function SiteFooter() {
           <div className="flex items-center gap-2 text-xs text-primary-foreground/70">
             <Globe className="h-4 w-4 text-gold" aria-hidden="true" />
             <span className="font-semibold text-primary-foreground/90">Global Operations:</span>
-            <span>United States (ConfigUSA)</span>
+            <span>United States (ConfigUSA Global HQ)</span>
             <span>·</span>
-            <span>India (Config Solutions Pvt Ltd)</span>
+            <span>Canada (ConfigUSA Canada Office)</span>
             <span>·</span>
-            <span>Canada (Accurate Systems Integrators)</span>
+            <span>India (ConfigUSA India Delivery Center)</span>
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-primary-foreground/70">
             <Link to="/privacy" className="hover:text-gold transition-colors">

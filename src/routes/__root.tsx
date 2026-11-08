@@ -4,10 +4,22 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useLocation,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { ScrollToTopButton } from "../components/ScrollToTopButton";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [pathname]);
+
+  return null;
+}
 
 function NotFoundComponent() {
   return (
@@ -80,7 +92,9 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <ScrollToTop />
       <Outlet />
+      <ScrollToTopButton />
     </QueryClientProvider>
   );
 }

@@ -295,7 +295,7 @@ export function HomeView() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">OUR COMPANY</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">WHO WE ARE</p>
               <h2 className="mt-2 font-display text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-[40px]">
                 Your Strategic Partner in Technology Talent and Workforce Solutions
               </h2>

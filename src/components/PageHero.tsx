@@ -37,8 +37,8 @@ const imageByKey: Record<HeroImageKey, string> = {
   about: "/assets/hero-about-clean.jpg?v=3",
   why: "/assets/hero-why-clean.jpg",
   leadership: "/assets/hero-leadership-bright.jpg?v=2",
-  approach: "/assets/hero-why-clean.jpg",
-  consulting: "/assets/hero-why-clean.jpg",
+  approach: "/assets/consulting-team.jpg?v=2",
+  consulting: "/assets/consulting-team.jpg?v=2",
   workforce: "/assets/hero-workforce-bright.jpg?v=2",
   itstaffing: "/assets/hero-itstaffing-bright.jpg?v=4",
   msp: "/assets/hero-msp-bright.jpg?v=2",
@@ -55,7 +55,7 @@ const imageByKey: Record<HeroImageKey, string> = {
   manufacturing: "/assets/ind-manufacturing.jpg",
   technology: "/assets/ind-technology.jpg",
   global: globalImage,
-  careers: "/assets/hero-careers-clean.jpg?v=5",
+  careers: "/assets/hero-careers-clean.jpg?v=6",
   contact: "/assets/hero-contact-final.jpg",
 };
 

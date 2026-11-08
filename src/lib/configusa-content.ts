@@ -318,7 +318,7 @@ export interface GlobalHub {
 export const globalHubs: GlobalHub[] = [
   {
     country: "United States",
-    entityName: "ConfigUSA",
+    entityName: "ConfigUSA (Global Headquarters)",
     role: "Enterprise Staffing, MSP Program Support & Client Engagement",
     focus: [
       "Enterprise contingent talent solutions and direct hire placement",
@@ -327,30 +327,14 @@ export const globalHubs: GlobalHub[] = [
       "Executive client engagement and nationwide operational delivery",
     ],
     contactDetails: {
-      address: "1000 Corporate Center Drive, Suite 300, Alpharetta, GA 30022",
-      phone: "+1 (888) 555-CFGUSA",
-      email: "inquiries@configusa.com",
-    },
-  },
-  {
-    country: "India",
-    entityName: "Config Solutions Private Limited",
-    role: "Technology Recruiting, Workforce Delivery & Global Sourcing",
-    focus: [
-      "Round-the-clock technical sourcing and qualification engine",
-      "Specialized engineering recruitment for software, AI, and data domains",
-      "Cross-border workforce delivery and offshore project resource support",
-      "Rigorous technical candidate screening and interview coordination",
-    ],
-    contactDetails: {
-      address: "Prestige Cyber Towers, 4th Floor, Hitec City, Hyderabad, TG 500081",
-      phone: "+91 40 6828 0000",
-      email: "india.desk@configusa.com",
+      address: "666 Plainsboro Road, Suite 1237, Plainsboro, NJ 08536",
+      phone: "+1 (609) 934-3184",
+      email: "contact@config-usa.com",
     },
   },
   {
     country: "Canada",
-    entityName: "Accurate Systems Integrators Inc.",
+    entityName: "Accurate Systems Integrators Inc. (North America Hub)",
     role: "Technology Staffing & Regional North American Business Support",
     focus: [
       "Canadian enterprise IT staffing and cross-border project augmentation",
@@ -359,9 +343,25 @@ export const globalHubs: GlobalHub[] = [
       "Integrated North American delivery coordination with US operations",
     ],
     contactDetails: {
-      address: "100 King Street West, Suite 5600, Toronto, ON M5X 1C9",
-      phone: "+1 (416) 555-8900",
-      email: "canada.desk@configusa.com",
+      address: "1585 Markham Road, Suite # 309, Toronto, ON M1B 2W1",
+      phone: "+1 (647) 557-6968",
+      email: "canada@config-usa.com",
+    },
+  },
+  {
+    country: "India",
+    entityName: "Config Solutions Private Limited (Delivery & Engineering Center)",
+    role: "Technology Recruiting, Workforce Delivery & Global Sourcing",
+    focus: [
+      "Round-the-clock technical sourcing and qualification engine",
+      "Specialized engineering recruitment for software, AI, and data domains",
+      "Cross-border workforce delivery and offshore project resource support",
+      "Rigorous technical candidate screening and interview coordination",
+    ],
+    contactDetails: {
+      address: "Trendz Sapphire, 3rd Floor, Vittal Rao Nagar, Madhapur, Hitech City, Hyderabad – 500081",
+      phone: "+91 80746 83380",
+      email: "india@config-usa.com",
     },
   },
 ];

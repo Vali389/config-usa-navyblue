@@ -123,20 +123,20 @@ export function SiteFooter() {
               <div className="flex items-start gap-2.5">
                 <MapPin className="mt-1 h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
                 <span>
-                  <strong className="block text-primary-foreground font-medium">United States · India · Canada</strong>
-                  North American HQ & Global Delivery Desks
+                  <strong className="block text-primary-foreground font-medium">Plainsboro, NJ · Hyderabad · Toronto</strong>
+                  United States · India · Canada
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
-                <a href="mailto:inquiries@configusa.com" className="hover:text-gold transition-colors">
-                  inquiries@configusa.com
+                <a href="mailto:contact@config-usa.com" className="hover:text-gold transition-colors">
+                  contact@config-usa.com
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
-                <a href="tel:+18885552348" className="hover:text-gold transition-colors">
-                  +1 (888) 555-CFGUSA
+                <a href="tel:+16099343184" className="hover:text-gold transition-colors">
+                  +1 (609) 934-3184
                 </a>
               </div>
               <div className="pt-2">

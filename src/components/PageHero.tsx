@@ -33,8 +33,8 @@ export type HeroImageKey =
 const imageByKey: Record<HeroImageKey, string> = {
   corporate: "/assets/hero-corporate-final.jpg",
   executives: "/assets/hero-leadership-bright.jpg",
-  whoweare: "/assets/hero-whoweare-clean.jpg",
-  about: "/assets/hero-about-clean.jpg",
+  whoweare: "/assets/hero-about-clean.jpg?v=3",
+  about: "/assets/hero-about-clean.jpg?v=3",
   why: "/assets/hero-why-clean.jpg",
   leadership: "/assets/hero-leadership-bright.jpg?v=2",
   approach: "/assets/hero-why-clean.jpg",

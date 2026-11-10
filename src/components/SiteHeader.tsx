@@ -33,15 +33,24 @@ export function SiteHeader() {
         <nav aria-label="Main Navigation" className="hidden items-center gap-1 xl:flex">
           <Link
             to="/"
-            className={`px-3 py-2 text-sm font-medium transition-colors hover:text-slate-brand ${
-              currentPath === "/" ? "font-semibold text-primary" : "text-foreground/90"
+            className={`relative px-3 py-2 text-sm font-medium transition-colors hover:text-slate-brand ${
+              currentPath === "/" ? "font-bold text-primary" : "text-foreground/90"
             }`}
           >
             Home
+            {currentPath === "/" && (
+              <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gold rounded-full" />
+            )}
           </Link>
 
           {navigationGroups.map((group) => {
-            const isGroupActive = group.items.some((item) => currentPath.startsWith(item.path.split("#")[0]));
+            const isGroupActive = group.items.some((item) => {
+              const itemBase = item.path.split("#")[0];
+              return currentPath === itemBase || (itemBase !== "/" && currentPath.startsWith(itemBase));
+            });
+            const isOpen = openDropdown === group.label;
+            const isHighlighted = isGroupActive || isOpen;
+
             return (
               <div
                 key={group.label}
@@ -51,22 +60,27 @@ export function SiteHeader() {
               >
                 <button
                   type="button"
-                  aria-expanded={openDropdown === group.label}
-                  className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors hover:text-slate-brand ${
-                    isGroupActive ? "font-semibold text-primary" : "text-foreground/90"
+                  aria-expanded={isOpen}
+                  className={`relative flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors rounded-md ${
+                    isHighlighted
+                      ? "font-bold text-primary bg-secondary/60"
+                      : "text-foreground/90 hover:text-slate-brand hover:bg-secondary/40"
                   }`}
                 >
                   {group.label}
                   <ChevronDown
                     className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                      openDropdown === group.label ? "rotate-180" : ""
+                      isOpen ? "rotate-180 text-primary" : "text-muted-foreground"
                     }`}
                     aria-hidden="true"
                   />
+                  {isHighlighted && (
+                    <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gold rounded-full" />
+                  )}
                 </button>
 
                 {/* Dropdown panel */}
-                {openDropdown === group.label && (
+                {isOpen && (
                   <div
                     className={`absolute top-full pt-1.5 z-50 ${
                       group.label === "Industries" ? "right-0" : "left-0"
@@ -86,14 +100,17 @@ export function SiteHeader() {
                           <Link
                             key={item.label}
                             to={item.path}
-                            className={`group flex flex-col justify-center rounded-lg px-3.5 py-2.5 text-left transition-colors ${
+                            className={`group flex flex-col justify-center rounded-lg px-3.5 py-2.5 text-left transition-all border ${
                               isActive
-                                ? "bg-secondary text-primary font-medium border-l-2 border-gold"
-                                : "text-foreground hover:bg-secondary/70 hover:text-primary"
+                                ? "bg-secondary text-primary font-semibold border-slate-200/90 dark:border-border shadow-xs border-l-2 border-l-gold"
+                                : "border-transparent text-foreground hover:bg-secondary/80 hover:border-slate-200/60 hover:text-primary hover:shadow-xs"
                             }`}
                           >
-                            <div className="text-sm font-semibold leading-snug text-primary">
-                              {item.label}
+                            <div className="text-sm font-semibold leading-snug text-primary flex items-center justify-between">
+                              <span>{item.label}</span>
+                              {isActive && (
+                                <span className="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
+                              )}
                             </div>
                             {item.description && (
                               <div className="mt-1 text-xs text-muted-foreground line-clamp-2 leading-relaxed">
@@ -112,11 +129,14 @@ export function SiteHeader() {
 
           <Link
             to="/global-presence"
-            className={`px-3 py-2 text-sm font-medium transition-colors hover:text-slate-brand ${
-              currentPath === "/global-presence" ? "font-semibold text-primary" : "text-foreground/90"
+            className={`relative px-3 py-2 text-sm font-medium transition-colors hover:text-slate-brand ${
+              currentPath === "/global-presence" ? "font-bold text-primary" : "text-foreground/90"
             }`}
           >
             Global Presence
+            {currentPath === "/global-presence" && (
+              <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gold rounded-full" />
+            )}
           </Link>
 
           {/* Careers Dropdown */}
@@ -128,34 +148,43 @@ export function SiteHeader() {
             <button
               type="button"
               aria-expanded={openDropdown === "Careers"}
-              className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors hover:text-slate-brand ${
-                currentPath.startsWith("/careers") ? "font-semibold text-primary" : "text-foreground/90"
+              className={`relative flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors rounded-md ${
+                currentPath.startsWith("/careers") || openDropdown === "Careers"
+                  ? "font-bold text-primary bg-secondary/60"
+                  : "text-foreground/90 hover:text-slate-brand hover:bg-secondary/40"
               }`}
             >
               Careers
               <ChevronDown
                 className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                  openDropdown === "Careers" ? "rotate-180" : ""
+                  openDropdown === "Careers" ? "rotate-180 text-primary" : "text-muted-foreground"
                 }`}
                 aria-hidden="true"
               />
+              {(currentPath.startsWith("/careers") || openDropdown === "Careers") && (
+                <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gold rounded-full" />
+              )}
             </button>
             {openDropdown === "Careers" && (
-              <div className="absolute left-0 top-full pt-1">
-                <div className="min-w-[240px] rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-2 shadow-xl ring-1 ring-black/5">
+              <div className="absolute left-0 top-full pt-1.5 z-50">
+                <div className="min-w-[280px] rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-2 shadow-2xl ring-1 ring-black/5 space-y-1">
                   <Link
                     to="/careers"
-                    className="block rounded-lg px-3.5 py-2.5 text-left text-sm font-medium text-foreground hover:bg-secondary/70 hover:text-primary"
+                    className={`block rounded-lg px-3.5 py-2.5 text-left text-sm font-medium transition-colors ${
+                      currentPath === "/careers"
+                        ? "bg-secondary text-primary font-semibold border-l-2 border-gold"
+                        : "text-foreground hover:bg-secondary/80 hover:text-primary"
+                    }`}
                   >
                     Job Opportunities
-                    <span className="block text-xs font-normal text-muted-foreground">Search and apply for open positions</span>
+                    <span className="block text-xs font-normal text-muted-foreground mt-0.5">Search and apply for open positions</span>
                   </Link>
                   <Link
                     to="/careers#submit-resume"
-                    className="block rounded-lg px-3.5 py-2.5 text-left text-sm font-medium text-foreground hover:bg-secondary/70 hover:text-primary"
+                    className="block rounded-lg px-3.5 py-2.5 text-left text-sm font-medium text-foreground hover:bg-secondary/80 hover:text-primary transition-colors"
                   >
                     Submit Resume
-                    <span className="block text-xs font-normal text-muted-foreground">Join our global talent community</span>
+                    <span className="block text-xs font-normal text-muted-foreground mt-0.5">Direct resume submission to recruiting team</span>
                   </Link>
                 </div>
               </div>

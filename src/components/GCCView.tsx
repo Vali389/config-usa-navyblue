@@ -1,77 +1,122 @@
 import React from "react";
 import { Link } from "@tanstack/react-router";
 import {
+  ArrowRight,
+  Check,
   Cpu,
-  ShieldCheck,
   Layers,
-  Network,
+  RefreshCw,
+  TrendingUp,
+  UserCheck,
+  Users,
+  Target,
+  ShieldCheck,
+  Cloud,
   Workflow,
   Landmark,
-  CheckCircle2,
-  ArrowRight,
+  Info,
 } from "lucide-react";
 
 import { SiteHeader } from "./SiteHeader";
 import { SiteFooter } from "./SiteFooter";
 import { PageHero } from "./PageHero";
 import { CredentialsSection } from "./CredentialsSection";
-import { InquiryForm } from "./InquiryForm";
 
 export function GCCView() {
-  const gccDomains = [
+  const supportCards = [
     {
-      name: "AI and Data Analytics",
+      icon: Target,
+      title: "Leadership and critical-role hiring.",
+      desc: "Targeted executive search and practice-lead recruitment to establish strong operational governance from day one.",
+    },
+    {
       icon: Cpu,
-      desc: "Machine learning engineering, generative AI integration, enterprise data lakehouses, and business intelligence.",
+      title: "Specialist technology and engineering talent.",
+      desc: "Sourcing vetted software engineers, data architects, cloud specialists and enterprise platform professionals.",
     },
     {
-      name: "Cloud and Cybersecurity",
-      icon: ShieldCheck,
-      desc: "Multi-cloud infrastructure, Kubernetes platform engineering, DevOps automation, and security operations (SOC/SIEM).",
+      icon: TrendingUp,
+      title: "Workforce ramp-up and mobilisation.",
+      desc: "High-volume recruitment frameworks designed to meet aggressive expansion milestones without sacrificing quality.",
     },
     {
-      name: "Enterprise Applications",
+      icon: UserCheck,
+      title: "Contract staffing and permanent hiring.",
+      desc: "Flexible engagement structures offering contingent staffing, direct placement and contract-to-hire options.",
+    },
+    {
       icon: Layers,
-      desc: "SAP S/4HANA, Workday HCM/Financials, Salesforce, and core enterprise application implementations and integrations.",
+      title: "Team build-out for new functions and capabilities.",
+      desc: "Assembling multidisciplinary engineering and operational pods for emerging technology capabilities.",
     },
     {
-      name: "Core Software & Product Engineering",
-      icon: Network,
-      desc: "High-scale backend architectures, microservices APIs, full-stack web, and enterprise mobile product development.",
-    },
-    {
-      name: "Product & Platform Teams",
-      icon: Workflow,
-      desc: "Technical program management, solution architecture, agile scrum leads, and UI/UX design systems.",
-    },
-    {
-      name: "Finance, Risk & Operations Technology",
-      icon: Landmark,
-      desc: "Quantitative modeling, regulatory reporting, financial crime compliance, and automated back-office operations.",
+      icon: RefreshCw,
+      title: "Workforce transition and scaling support, where agreed.",
+      desc: "Structured retention, workforce continuity and capability expansion protocols across mature GCC operations.",
     },
   ];
 
-  const gccLifecycle = [
+  const lifecycleSteps = [
     {
       step: "01",
-      phase: "Strategy & Site Advisory",
-      desc: "Location benchmarking, talent availability mapping, compensation indexing, and operating model alignment for Indian tech hubs.",
+      phase: "Plan",
+      text: "Understand capability priorities, roles and ramp-up requirements.",
     },
     {
       step: "02",
-      phase: "Leadership & Anchor Hiring",
-      desc: "Sourcing proven site leaders, enterprise architects, practice leads, and core technical anchors to build the hub's foundation.",
+      phase: "Build",
+      text: "Identify leadership and specialist talent for priority functions.",
     },
     {
       step: "03",
-      phase: "Rapid Pod Scaling",
-      desc: "Scaling cross-functional pods across software, data, cloud, and QA with rigorous technical screening and vetted onboarding.",
+      phase: "Scale",
+      text: "Mobilise teams against agreed hiring plans and timelines.",
     },
     {
       step: "04",
-      phase: "Maturity & Value Creation",
-      desc: "Transforming delivery units into autonomous innovation centers that own product roadmaps and drive global enterprise IP.",
+      phase: "Strengthen",
+      text: "Support retention, workforce continuity and capability expansion.",
     },
+  ];
+
+  const talentDomains = [
+    {
+      name: "AI and data",
+      icon: Cpu,
+      desc: "Machine learning, data engineering, analytics pipelines and business intelligence.",
+    },
+    {
+      name: "Cloud and cybersecurity",
+      icon: Cloud,
+      desc: "Cloud infrastructure, DevOps, platform engineering and security operations.",
+    },
+    {
+      name: "Enterprise applications",
+      icon: Layers,
+      desc: "Workday, SAP, MuleSoft, Salesforce and enterprise system integrations.",
+    },
+    {
+      name: "Software engineering",
+      icon: Workflow,
+      desc: "Full-stack development, modern microservices, APIs and digital product engineering.",
+    },
+    {
+      name: "Product and platform teams",
+      icon: Users,
+      desc: "Technical product management, architecture, agile delivery and quality engineering.",
+    },
+    {
+      name: "Finance operations and risk technology",
+      icon: Landmark,
+      desc: "Quantitative analytics, financial technology, risk modeling and regulatory reporting.",
+    },
+  ];
+
+  const engagementPoints = [
+    "A dedicated client contact",
+    "Agreed role priorities",
+    "Transparent recruitment reporting",
+    "A mobilisation plan aligned to the client's operating model",
   ];
 
   return (
@@ -79,97 +124,51 @@ export function GCCView() {
       <SiteHeader />
       <main className="flex-1">
         <PageHero
-          eyebrow="GLOBAL CAPABILITY CENTERS (GCC)"
-          title="Build, Scale and Mature Your Global Capability Center in India."
-          description="ConfigUSA partners with global enterprises to establish, expand and optimize Global Capability Centers in India. From strategic talent acquisition to operational scaling, we provide the talent intelligence and delivery infrastructure for high-performing engineering hubs."
+          eyebrow="GCC SOLUTIONS"
+          title="Build and scale your GCC with the right talent and workforce strategy."
+          description="Global Capability Centres are evolving from cost-focused operations into strategic hubs for technology, data, engineering and business services. ConfigUSA supports organisations with specialist talent and workforce solutions aligned to their GCC growth plans."
           image="gcc"
           primaryCta={{ label: "Discuss Your GCC Plans", to: "/contact" }}
-          secondaryCta={{ label: "Explore GCC Roadmap", to: "/gcc#lifecycle" }}
+          secondaryCta={{ label: "How We Support GCCs", to: "#how-we-support" }}
         />
 
-        {/* Section 1: Overview & Strategic Value */}
-        <section className="py-12 sm:py-16 bg-background">
-          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
-            <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
-              <div className="lg:col-span-7">
-                <div className="flex items-center gap-2.5 mb-2">
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">STRATEGIC EXPANSION</span>
-                  <span className="w-8 h-[2px] bg-gold" />
-                </div>
-                <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary leading-tight">
-                  Transforming Indian Hubs from Cost Arbitrage to Autonomous Innovation Drivers
-                </h2>
-              </div>
-              <div className="lg:col-span-5 text-muted-foreground text-sm sm:text-base leading-relaxed lg:border-l lg:border-border lg:pl-6 pt-1">
-                The narrative surrounding GCCs in India has fundamentally shifted. Where past decades focused on back-office maintenance, today's Tier-1 GCCs drive proprietary software development, cloud transformations, generative AI research, and executive leadership.
-              </div>
-            </div>
-
-            {/* Lifecycle Roadmap */}
-            <div id="lifecycle" className="mt-16 scroll-mt-20">
-              <div className="text-center max-w-2xl mx-auto mb-10">
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">SUPPORT ACROSS THE LIFECYCLE</span>
-                <h3 className="mt-1 font-display text-2xl sm:text-3xl font-bold text-primary">
-                  A Structured Roadmap Supporting Setup, Scaling & Maturity
-                </h3>
-              </div>
-
-              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                {gccLifecycle.map((item) => (
-                  <div
-                    key={item.step}
-                    className="group rounded-2xl border border-border bg-card p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-lg flex flex-col justify-between"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-gold font-mono font-bold text-xs">
-                          {item.step}
-                        </span>
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-slate-brand">Phase {item.step}</span>
-                      </div>
-                      <h4 className="text-base font-bold text-primary mb-2">{item.phase}</h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 2: Typical GCC Talent Domains */}
-        <section className="py-12 sm:py-16 bg-slate-50/70 border-y border-border">
+        {/* Section 1: How We Support GCCs */}
+        <section id="how-we-support" className="py-12 lg:py-16 bg-white border-b border-[#e2e8f0] scroll-mt-24">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid lg:grid-cols-12 gap-8 items-start mb-10">
               <div className="lg:col-span-7">
-                <div className="flex items-center gap-2.5 mb-2">
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">TALENT DOMAINS</span>
-                  <span className="w-8 h-[2px] bg-gold" />
+                <div className="flex items-center gap-2.5 mb-3">
+                  <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#102B4E]">
+                    HOW WE SUPPORT GCCS
+                  </span>
+                  <span className="w-10 h-[3px] bg-[#C83B43]" />
                 </div>
-                <h3 className="font-display text-2xl sm:text-3xl font-bold text-primary">
-                  Specialist Capability Across Technical and Operational Domains
-                </h3>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102B4E] tracking-tight leading-tight">
+                  Specialist talent and workforce solutions across GCC initiatives.
+                </h2>
               </div>
-              <div className="lg:col-span-5 text-muted-foreground text-xs sm:text-sm leading-relaxed lg:border-l lg:border-border lg:pl-6 pt-1">
-                AI and data engineering, cloud and cybersecurity, enterprise applications (SAP/Workday), full-stack product engineering, and quantitative risk technology.
+              <div className="lg:col-span-5 text-slate-600 text-sm sm:text-base leading-relaxed lg:pt-2">
+                ConfigUSA supports organisations with specialist talent and workforce solutions aligned to their GCC growth plans.
               </div>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {gccDomains.map((dom) => {
-                const Icon = dom.icon;
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {supportCards.map((card) => {
+                const Icon = card.icon;
                 return (
                   <div
-                    key={dom.name}
-                    className="group rounded-2xl border border-border bg-white p-6 shadow-xs hover:-translate-y-1 hover:shadow-md hover:border-gold transition-all duration-300 flex flex-col justify-between"
+                    key={card.title}
+                    className="rounded-xl border border-slate-200/90 bg-white p-6 shadow-sm hover:shadow-md transition-all flex flex-col"
                   >
-                    <div>
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4 group-hover:bg-primary group-hover:text-gold transition-colors">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <h4 className="text-base font-bold text-primary mb-2">{dom.name}</h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{dom.desc}</p>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 text-[#102B4E] mb-5">
+                      <Icon className="h-6 w-6" />
                     </div>
+                    <h3 className="text-base font-bold text-[#102B4E] tracking-tight mb-2.5">
+                      {card.title}
+                    </h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      {card.desc}
+                    </p>
                   </div>
                 );
               })}
@@ -177,87 +176,165 @@ export function GCCView() {
           </div>
         </section>
 
-        {/* Section 3: Visual Campus Showcase & Hyderabad Delivery Center */}
-        <section className="py-12 sm:py-16 bg-background">
+        {/* Section 2: Support Across the GCC Lifecycle */}
+        <section className="py-12 lg:py-16 bg-[#F8FAFC] border-b border-[#e2e8f0]">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
-            <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
-              <div className="lg:col-span-7 space-y-6">
-                <div>
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">INDIA OPERATIONS</span>
-                  <h3 className="mt-2 font-display text-3xl sm:text-4xl font-bold text-primary">
-                    Direct Access to ConfigUSA's Hyderabad Delivery Center
-                  </h3>
-                  <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                    Our established engineering center in Hyderabad (Madhapur, Hitech City) provides the operational infrastructure, talent intelligence, and recruitment bandwidth needed to launch or scale your GCC smoothly.
+            <div className="max-w-3xl mb-12">
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#102B4E]">
+                  SUPPORT ACROSS THE GCC LIFECYCLE
+                </span>
+                <span className="w-10 h-[3px] bg-[#C83B43]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102B4E] tracking-tight leading-tight">
+                A structured roadmap supporting setup, scaling and maturity.
+              </h2>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {lifecycleSteps.map((step) => (
+                <div
+                  key={step.step}
+                  className="rounded-xl border border-slate-200/90 bg-white p-6 shadow-sm flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-2xl font-black text-[#C83B43] tracking-tight">
+                        {step.step}
+                      </span>
+                      <span className="text-xs font-bold uppercase tracking-wider bg-slate-100 text-[#102B4E] px-2.5 py-1 rounded">
+                        Phase {step.step}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#102B4E] tracking-tight mb-2">
+                      {step.phase}
+                    </h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      {step.text}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3: Typical GCC Talent Domains */}
+        <section className="py-12 lg:py-16 bg-white border-b border-[#e2e8f0]">
+          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+            <div className="grid lg:grid-cols-12 gap-8 items-start mb-10">
+              <div className="lg:col-span-7">
+                <div className="flex items-center gap-2.5 mb-3">
+                  <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#102B4E]">
+                    TYPICAL GCC TALENT DOMAINS
+                  </span>
+                  <span className="w-10 h-[3px] bg-[#C83B43]" />
+                </div>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102B4E] tracking-tight leading-tight">
+                  Specialist capability across technical and operational domains.
+                </h2>
+              </div>
+              <div className="lg:col-span-5 text-slate-600 text-sm sm:text-base leading-relaxed lg:pt-2">
+                AI and data, cloud and cybersecurity, enterprise applications, software engineering, product and platform teams, finance operations and risk technology—subject to confirmed sourcing capability.
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {talentDomains.map((domain) => {
+                const Icon = domain.icon;
+                return (
+                  <div
+                    key={domain.name}
+                    className="rounded-xl border border-slate-200/90 bg-white p-6 shadow-sm hover:shadow-md transition-all flex flex-col"
+                  >
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-[#102B4E] mb-4">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-base font-bold text-[#102B4E] tracking-tight mb-2">
+                      {domain.name}
+                    </h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      {domain.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4: Our Engagement Approach */}
+        <section className="py-12 lg:py-16 bg-[#F8FAFC] border-b border-[#e2e8f0]">
+          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+            <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+              <div className="lg:col-span-7">
+                <div className="flex items-center gap-2.5 mb-3">
+                  <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#102B4E]">
+                    OUR ENGAGEMENT APPROACH
+                  </span>
+                  <span className="w-10 h-[3px] bg-[#C83B43]" />
+                </div>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102B4E] tracking-tight leading-tight mb-6">
+                  Accountable recruitment and talent delivery for GCC hubs.
+                </h2>
+
+                <div className="space-y-3.5 mb-8">
+                  {engagementPoints.map((point) => (
+                    <div key={point} className="flex items-center gap-3">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#C83B43] text-white">
+                        <Check className="h-3 w-3 stroke-[3]" />
+                      </span>
+                      <span className="text-sm sm:text-base font-semibold text-slate-700 leading-snug">
+                        {point}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="rounded-xl border border-slate-200/90 bg-white p-5 shadow-xs flex items-start gap-3.5">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-[#102B4E] mt-0.5">
+                    <Info className="h-4 w-4" />
+                  </span>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <strong className="text-[#102B4E] font-semibold">Scope of Service:</strong>{" "}
+                    Legal entity formation, tax, regulatory and real-estate advisory are outside scope unless provided through qualified partners.
                   </p>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm font-semibold text-primary">Dedicated client engagement partner and technical delivery management</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm font-semibold text-primary">Pre-screened candidate pipelines across high-demand enterprise stacks</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm font-semibold text-primary">Transparent reporting, compensation benchmarking, and rapid mobilisation plans</span>
-                  </div>
-                </div>
-
-                <div className="rounded-xl border border-border bg-slate-50 p-4 text-xs text-muted-foreground">
-                  <strong className="text-primary">Delivery Hub Address:</strong> Trendz Sapphire, 3rd Floor, Flat No. 1-99/V/2, Vittal Rao Nagar, Madhapur, Hitech City, Hyderabad – 500081, Telangana, India. Phone: +91 80746 83380.
                 </div>
               </div>
 
               <div className="lg:col-span-5">
-                <div className="relative overflow-hidden rounded-2xl border border-border bg-slate-900 shadow-xl">
+                <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
                   <img
-                    src="/assets/gcc-enterprise-hub.jpg"
-                    alt="ConfigUSA Global Capability Center technology campus in India"
-                    width={1600}
-                    height={1200}
-                    className="w-full h-80 lg:h-96 object-cover object-center"
+                    src="/assets/gcc-enterprise-hub-exact.jpg"
+                    alt="Global Capability Centre in India"
+                    className="w-full h-80 sm:h-96 object-cover object-center"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-5 left-5 right-5 text-white">
-                    <p className="text-xs font-bold uppercase tracking-wider text-gold">GCC Delivery Center</p>
-                    <p className="text-xs sm:text-sm font-medium text-white/90 mt-1">Tier-1 Technology Campus & Global Sourcing Infrastructure</p>
-                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Quick Sourcing Form */}
-            <div className="mt-16 rounded-2xl border border-border bg-slate-50/60 p-6 sm:p-10">
-              <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-                <div>
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">GCC ENGAGEMENT</span>
-                  <h3 className="mt-2 font-display text-2xl sm:text-3xl font-bold text-primary">
-                    Planning or Scaling a GCC in India?
-                  </h3>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                    Talk to our cross-border delivery team about Indian talent availability, location insights, and customized engagement structures.
-                  </p>
-                  <div className="mt-6 flex flex-wrap items-center gap-4">
-                    <Link
-                      to="/contact"
-                      className="inline-flex h-11 items-center gap-2 rounded-lg bg-primary shadow-sm px-6 text-sm font-semibold text-primary-foreground hover:bg-slate-brand transition-colors"
-                    >
-                      Discuss Your GCC Plans
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </div>
-                </div>
-
-                <div>
-                  <InquiryForm
-                    title="GCC Solutions Inquiry"
-                    subtitle="Connect with our global cross-border workforce leaders."
-                  />
-                </div>
+        {/* Section 5: Exact Horizontal Navy Bottom Banner (NO GIANT FORM, NO EMPTY SPACE!) */}
+        <section className="bg-[#102B4E] text-white py-8 lg:py-10 border-t border-white/10">
+          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+            <div className="grid lg:grid-cols-12 gap-6 items-center">
+              <div className="lg:col-span-5">
+                <h2 className="text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-tight">
+                  Planning or scaling a GCC in India?
+                </h2>
+              </div>
+              <div className="lg:col-span-4 text-slate-200 text-sm lg:text-base lg:border-l lg:border-white/20 lg:pl-6 leading-relaxed">
+                Talk to our team about market insights, talent availability and engagement structures.
+              </div>
+              <div className="lg:col-span-3 lg:text-right">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 rounded bg-gold px-6 py-3 text-sm font-bold text-primary shadow-md hover:bg-gold/90 transition-all"
+                >
+                  Discuss Your GCC Plans
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>

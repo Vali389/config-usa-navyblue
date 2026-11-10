@@ -26,6 +26,7 @@ export const navigationGroups: NavigationGroup[] = [
       { label: "MSP & VMS Programs", path: "/solutions/msp-vms", description: "Enterprise delivery with discipline, compliance, and speed." },
       { label: "Technology Consulting & Resource Augmentation", path: "/solutions/technology-consulting", description: "Specialized resources for critical technology initiatives." },
       { label: "Forward-Deployed Engineering (FDE)", path: "/services/forward-deployed-engineering", description: "Embedded elite engineers delivering operational solutions at the frontline." },
+      { label: "Palantir Talent & Specialist Workforce", path: "/services/palantir", description: "Specialist talent for data-driven enterprise platforms and AIP workflows." },
       { label: "Global Capability Centers (GCC)", path: "/gcc", description: "Establish and scale offshore enterprise capability centers in India." },
     ],
   },

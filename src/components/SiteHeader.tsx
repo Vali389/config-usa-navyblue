@@ -67,8 +67,18 @@ export function SiteHeader() {
 
                 {/* Dropdown panel */}
                 {openDropdown === group.label && (
-                  <div className="absolute left-0 top-full pt-1">
-                    <div className="min-w-[280px] rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-2 shadow-xl ring-1 ring-black/5 animate-in fade-in-50 zoom-in-95">
+                  <div
+                    className={`absolute top-full pt-1.5 z-50 ${
+                      group.label === "Industries" ? "right-0" : "left-0"
+                    }`}
+                  >
+                    <div
+                      className={`rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card shadow-2xl ring-1 ring-black/5 animate-in fade-in-50 zoom-in-95 ${
+                        group.items.length >= 4
+                          ? "w-[620px] p-3 grid grid-cols-2 gap-2"
+                          : "min-w-[280px] p-2 space-y-1"
+                      }`}
+                    >
                       {group.items.map((item) => {
                         const itemBase = item.path.split("#")[0];
                         const isActive = currentPath === itemBase;
@@ -76,15 +86,19 @@ export function SiteHeader() {
                           <Link
                             key={item.label}
                             to={item.path}
-                            className={`block rounded-lg px-3.5 py-2.5 text-left transition-colors ${
+                            className={`group flex flex-col justify-center rounded-lg px-3.5 py-2.5 text-left transition-colors ${
                               isActive
-                                ? "bg-secondary text-primary font-medium"
+                                ? "bg-secondary text-primary font-medium border-l-2 border-gold"
                                 : "text-foreground hover:bg-secondary/70 hover:text-primary"
                             }`}
                           >
-                            <div className="text-sm font-medium leading-snug">{item.label}</div>
+                            <div className="text-sm font-semibold leading-snug text-primary">
+                              {item.label}
+                            </div>
                             {item.description && (
-                              <div className="mt-0.5 text-xs text-muted-foreground line-clamp-1">{item.description}</div>
+                              <div className="mt-1 text-xs text-muted-foreground line-clamp-2 leading-relaxed">
+                                {item.description}
+                              </div>
                             )}
                           </Link>
                         );

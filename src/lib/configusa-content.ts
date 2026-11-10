@@ -28,8 +28,6 @@ export const navigationGroups: NavigationGroup[] = [
       { label: "Forward-Deployed Engineering (FDE)", path: "/services/forward-deployed-engineering", description: "Embedded elite engineers delivering operational solutions at the frontline." },
       { label: "Palantir Talent & Specialist Workforce", path: "/services/palantir", description: "Specialist talent for data-driven enterprise platforms and AIP workflows." },
       { label: "Global Capability Centers (GCC)", path: "/gcc", description: "Establish and scale offshore enterprise capability centers in India." },
-      { label: "Forward-Deployed Engineering (FDE)", path: "/services/forward-deployed-engineering", description: "Embedded elite engineers delivering operational solutions at the frontline." },
-      { label: "Global Capability Centers (GCC)", path: "/gcc", description: "Establish and scale offshore enterprise capability centers in India." },
     ],
   },
   {

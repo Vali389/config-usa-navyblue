@@ -59,9 +59,9 @@ const imageByKey: Record<HeroImageKey, string> = {
   technology: "/assets/ind-technology.jpg",
   global: globalImage,
   careers: "/assets/hero-careers-clean.jpg?v=6",
-  palantir: "/assets/hero-palantir-exact.jpg",
-  fde: "/assets/hero-fde-exact.png",
-  gcc: "/assets/hero-gcc-exact.jpg",
+  palantir: "/assets/hero-palantir-new.jpg",
+  fde: "/assets/hero-fde-new.jpg",
+  gcc: "/assets/hero-gcc-new.jpg",
   contact: "/assets/hero-contact-final.jpg",
 };
 

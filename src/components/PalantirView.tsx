@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
-  Check,
+  CheckCircle2,
   Cpu,
   Database,
   Layers,
@@ -94,21 +94,21 @@ export function PalantirView() {
         />
 
         {/* Section 1: Talent Areas */}
-        <section id="talent-areas" className="py-12 lg:py-16 bg-white border-b border-[#e2e8f0] scroll-mt-24">
+        <section id="talent-areas" className="py-12 lg:py-16 bg-white border-b border-border/80 scroll-mt-24">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid lg:grid-cols-12 gap-8 items-start mb-10">
               <div className="lg:col-span-7">
-                <div className="flex items-center gap-2.5 mb-3">
-                  <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#102B4E]">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
                     TALENT AREAS
-                  </span>
-                  <span className="w-10 h-[3px] bg-[#C83B43]" />
+                  </p>
                 </div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102B4E] tracking-tight leading-tight">
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight">
                   Specialist technical capability across complex data architectures.
                 </h2>
               </div>
-              <div className="lg:col-span-5 text-slate-600 text-sm sm:text-base leading-relaxed lg:pt-2">
+              <div className="lg:col-span-5 text-muted-foreground text-sm sm:text-base leading-relaxed lg:pt-2">
                 Connecting enterprises with qualified engineers, architects and delivery leads who understand mission-critical data platforms.
               </div>
             </div>
@@ -119,15 +119,15 @@ export function PalantirView() {
                 return (
                   <div
                     key={card.title}
-                    className="rounded-xl border border-slate-200/90 bg-white p-6 shadow-sm hover:shadow-md transition-all flex flex-col"
+                    className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-all flex flex-col"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 text-[#102B4E] mb-5">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <h3 className="text-base font-bold text-[#102B4E] tracking-tight mb-2.5">
+                    <h3 className="text-base font-bold text-primary tracking-tight mb-2.5">
                       {card.title}
                     </h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       {card.desc}
                     </p>
                   </div>
@@ -138,16 +138,16 @@ export function PalantirView() {
         </section>
 
         {/* Section 2: Our Talent Process */}
-        <section className="py-12 lg:py-16 bg-[#F8FAFC] border-b border-[#e2e8f0]">
+        <section className="py-12 lg:py-16 bg-slate-50/70 border-b border-border/80">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="max-w-3xl mb-12">
-              <div className="flex items-center gap-2.5 mb-3">
-                <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#102B4E]">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
                   OUR TALENT PROCESS
-                </span>
-                <span className="w-10 h-[3px] bg-[#C83B43]" />
+                </p>
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102B4E] tracking-tight leading-tight">
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight">
                 A structured, rigorous selection path ensuring fit and capability.
               </h2>
             </div>
@@ -156,16 +156,16 @@ export function PalantirView() {
               {talentSteps.map((step) => (
                 <div
                   key={step.step}
-                  className="rounded-xl border border-slate-200/90 bg-white p-6 shadow-sm flex flex-col justify-between"
+                  className="rounded-xl border border-border bg-card p-6 shadow-sm flex flex-col justify-between"
                 >
                   <div>
-                    <span className="text-2xl font-black text-[#C83B43] tracking-tight block mb-4">
+                    <span className="font-display text-2xl font-bold text-gold tracking-tight block mb-4">
                       {step.step}
                     </span>
-                    <h3 className="text-base font-bold text-[#102B4E] tracking-tight mb-2">
+                    <h3 className="text-base font-bold text-primary tracking-tight mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
@@ -175,28 +175,26 @@ export function PalantirView() {
           </div>
         </section>
 
-        {/* Section 3: Transparent Engagement */}
-        <section className="py-12 lg:py-16 bg-white border-b border-[#e2e8f0]">
+        {/* Section 3: Transparent Engagement - Strictly on ConfigUSA Theme */}
+        <section className="py-12 lg:py-16 bg-white border-b border-border/80">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
               <div className="lg:col-span-7">
-                <div className="flex items-center gap-2.5 mb-3">
-                  <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#102B4E]">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
                     TRANSPARENT ENGAGEMENT
-                  </span>
-                  <span className="w-10 h-[3px] bg-[#C83B43]" />
+                  </p>
                 </div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102B4E] tracking-tight leading-tight mb-6">
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight mb-6">
                   What clients can expect throughout the talent engagement.
                 </h2>
 
                 <div className="space-y-3.5 mb-8">
                   {transparentEngagement.map((point) => (
                     <div key={point} className="flex items-start gap-3">
-                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#C83B43] text-white mt-0.5">
-                        <Check className="h-3 w-3 stroke-[3]" />
-                      </span>
-                      <span className="text-sm sm:text-base font-semibold text-slate-700 leading-snug">
+                      <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base font-semibold text-primary leading-snug">
                         {point}
                       </span>
                     </div>
@@ -205,7 +203,7 @@ export function PalantirView() {
               </div>
 
               <div className="lg:col-span-5">
-                <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
+                <div className="relative rounded-2xl overflow-hidden border border-border shadow-lg">
                   <img
                     src="/assets/hero-data-exact.jpg"
                     alt="Enterprise Data Engineering Team"
@@ -217,19 +215,19 @@ export function PalantirView() {
           </div>
         </section>
 
-        {/* Section 4: Important Clarification Box */}
-        <section className="py-10 lg:py-12 bg-[#F3F5F8] border-b border-[#e2e8f0]">
+        {/* Section 4: Important Clarification Box - ConfigUSA Theme */}
+        <section className="py-10 lg:py-12 bg-slate-50/70 border-b border-border/80">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
-            <div className="rounded-xl border border-slate-200/90 bg-white p-6 sm:p-8 lg:p-10 shadow-xs max-w-4xl mx-auto">
+            <div className="rounded-xl border border-border bg-card p-6 sm:p-8 lg:p-10 shadow-xs max-w-4xl mx-auto">
               <div className="flex items-start gap-4">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-amber-700 border border-amber-200 mt-1">
-                  <ShieldAlert className="h-5 w-5" />
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20 mt-1">
+                  <ShieldAlert className="h-5 w-5 text-gold" />
                 </span>
                 <div>
-                  <h3 className="text-lg font-bold text-[#102B4E] tracking-tight mb-2">
+                  <h3 className="font-display text-lg font-bold text-primary tracking-tight mb-2">
                     Important clarification
                   </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     ConfigUSA's role in each engagement will be stated accurately. Talent sourcing, staffing and implementation services are distinct offerings. Any partner or authorised status will be claimed only where formally approved.
                   </p>
                 </div>
@@ -238,22 +236,22 @@ export function PalantirView() {
           </div>
         </section>
 
-        {/* Section 5: Exact Horizontal Navy Bottom Banner (NO GIANT FORM, NO EMPTY SPACE!) */}
-        <section className="bg-[#102B4E] text-white py-8 lg:py-10 border-t border-white/10">
+        {/* Section 5: ConfigUSA Theme Horizontal Navy Bottom Banner */}
+        <section className="bg-primary text-primary-foreground py-10 lg:py-12 border-t border-primary/20">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-5">
-                <h2 className="text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-tight">
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight">
                   Need specialist data or platform talent?
                 </h2>
               </div>
-              <div className="lg:col-span-4 text-slate-200 text-sm lg:text-base lg:border-l lg:border-white/20 lg:pl-6 leading-relaxed">
+              <div className="lg:col-span-4 text-primary-foreground/80 text-sm sm:text-base lg:border-l lg:border-white/20 lg:pl-6 leading-relaxed">
                 Let us know the technical environment, seniority and deployment timeline you require.
               </div>
               <div className="lg:col-span-3 lg:text-right">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 rounded bg-gold px-6 py-3 text-sm font-bold text-primary shadow-md hover:bg-gold/90 transition-all"
+                  className="inline-flex items-center gap-2 rounded bg-gold px-6 py-3 text-sm font-semibold text-primary shadow-sm hover:bg-gold/90 transition-all"
                 >
                   Discuss Specialist Talent Needs
                   <ArrowRight className="h-4 w-4" />

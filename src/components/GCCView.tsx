@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
-  Check,
+  CheckCircle2,
   Cpu,
   Layers,
   RefreshCw,
@@ -10,7 +10,6 @@ import {
   UserCheck,
   Users,
   Target,
-  ShieldCheck,
   Cloud,
   Workflow,
   Landmark,
@@ -133,21 +132,21 @@ export function GCCView() {
         />
 
         {/* Section 1: How We Support GCCs */}
-        <section id="how-we-support" className="py-12 lg:py-16 bg-white border-b border-[#e2e8f0] scroll-mt-24">
+        <section id="how-we-support" className="py-12 lg:py-16 bg-white border-b border-border/80 scroll-mt-24">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid lg:grid-cols-12 gap-8 items-start mb-10">
               <div className="lg:col-span-7">
-                <div className="flex items-center gap-2.5 mb-3">
-                  <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#102B4E]">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
                     HOW WE SUPPORT GCCS
-                  </span>
-                  <span className="w-10 h-[3px] bg-[#C83B43]" />
+                  </p>
                 </div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102B4E] tracking-tight leading-tight">
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight">
                   Specialist talent and workforce solutions across GCC initiatives.
                 </h2>
               </div>
-              <div className="lg:col-span-5 text-slate-600 text-sm sm:text-base leading-relaxed lg:pt-2">
+              <div className="lg:col-span-5 text-muted-foreground text-sm sm:text-base leading-relaxed lg:pt-2">
                 ConfigUSA supports organisations with specialist talent and workforce solutions aligned to their GCC growth plans.
               </div>
             </div>
@@ -158,15 +157,15 @@ export function GCCView() {
                 return (
                   <div
                     key={card.title}
-                    className="rounded-xl border border-slate-200/90 bg-white p-6 shadow-sm hover:shadow-md transition-all flex flex-col"
+                    className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-all flex flex-col"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 text-[#102B4E] mb-5">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <h3 className="text-base font-bold text-[#102B4E] tracking-tight mb-2.5">
+                    <h3 className="text-base font-bold text-primary tracking-tight mb-2.5">
                       {card.title}
                     </h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       {card.desc}
                     </p>
                   </div>
@@ -177,16 +176,16 @@ export function GCCView() {
         </section>
 
         {/* Section 2: Support Across the GCC Lifecycle */}
-        <section className="py-12 lg:py-16 bg-[#F8FAFC] border-b border-[#e2e8f0]">
+        <section className="py-12 lg:py-16 bg-slate-50/70 border-b border-border/80">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="max-w-3xl mb-12">
-              <div className="flex items-center gap-2.5 mb-3">
-                <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#102B4E]">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
                   SUPPORT ACROSS THE GCC LIFECYCLE
-                </span>
-                <span className="w-10 h-[3px] bg-[#C83B43]" />
+                </p>
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102B4E] tracking-tight leading-tight">
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight">
                 A structured roadmap supporting setup, scaling and maturity.
               </h2>
             </div>
@@ -195,21 +194,21 @@ export function GCCView() {
               {lifecycleSteps.map((step) => (
                 <div
                   key={step.step}
-                  className="rounded-xl border border-slate-200/90 bg-white p-6 shadow-sm flex flex-col justify-between"
+                  className="rounded-xl border border-border bg-card p-6 shadow-sm flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-2xl font-black text-[#C83B43] tracking-tight">
+                      <span className="font-display text-2xl font-bold text-gold tracking-tight">
                         {step.step}
                       </span>
-                      <span className="text-xs font-bold uppercase tracking-wider bg-slate-100 text-[#102B4E] px-2.5 py-1 rounded">
+                      <span className="text-xs font-semibold uppercase tracking-wider bg-primary/10 text-primary px-2.5 py-1 rounded">
                         Phase {step.step}
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold text-[#102B4E] tracking-tight mb-2">
+                    <h3 className="text-lg font-bold text-primary tracking-tight mb-2">
                       {step.phase}
                     </h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       {step.text}
                     </p>
                   </div>
@@ -220,21 +219,21 @@ export function GCCView() {
         </section>
 
         {/* Section 3: Typical GCC Talent Domains */}
-        <section className="py-12 lg:py-16 bg-white border-b border-[#e2e8f0]">
+        <section className="py-12 lg:py-16 bg-white border-b border-border/80">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid lg:grid-cols-12 gap-8 items-start mb-10">
               <div className="lg:col-span-7">
-                <div className="flex items-center gap-2.5 mb-3">
-                  <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#102B4E]">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
                     TYPICAL GCC TALENT DOMAINS
-                  </span>
-                  <span className="w-10 h-[3px] bg-[#C83B43]" />
+                  </p>
                 </div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102B4E] tracking-tight leading-tight">
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight">
                   Specialist capability across technical and operational domains.
                 </h2>
               </div>
-              <div className="lg:col-span-5 text-slate-600 text-sm sm:text-base leading-relaxed lg:pt-2">
+              <div className="lg:col-span-5 text-muted-foreground text-sm sm:text-base leading-relaxed lg:pt-2">
                 AI and data, cloud and cybersecurity, enterprise applications, software engineering, product and platform teams, finance operations and risk technology—subject to confirmed sourcing capability.
               </div>
             </div>
@@ -245,15 +244,15 @@ export function GCCView() {
                 return (
                   <div
                     key={domain.name}
-                    className="rounded-xl border border-slate-200/90 bg-white p-6 shadow-sm hover:shadow-md transition-all flex flex-col"
+                    className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-all flex flex-col"
                   >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-[#102B4E] mb-4">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="text-base font-bold text-[#102B4E] tracking-tight mb-2">
+                    <h3 className="text-base font-bold text-primary tracking-tight mb-2">
                       {domain.name}
                     </h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       {domain.desc}
                     </p>
                   </div>
@@ -263,47 +262,45 @@ export function GCCView() {
           </div>
         </section>
 
-        {/* Section 4: Our Engagement Approach */}
-        <section className="py-12 lg:py-16 bg-[#F8FAFC] border-b border-[#e2e8f0]">
+        {/* Section 4: Our Engagement Approach - Strictly on ConfigUSA Theme */}
+        <section className="py-12 lg:py-16 bg-slate-50/70 border-b border-border/80">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
               <div className="lg:col-span-7">
-                <div className="flex items-center gap-2.5 mb-3">
-                  <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#102B4E]">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
                     OUR ENGAGEMENT APPROACH
-                  </span>
-                  <span className="w-10 h-[3px] bg-[#C83B43]" />
+                  </p>
                 </div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102B4E] tracking-tight leading-tight mb-6">
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight mb-6">
                   Accountable recruitment and talent delivery for GCC hubs.
                 </h2>
 
                 <div className="space-y-3.5 mb-8">
                   {engagementPoints.map((point) => (
                     <div key={point} className="flex items-center gap-3">
-                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#C83B43] text-white">
-                        <Check className="h-3 w-3 stroke-[3]" />
-                      </span>
-                      <span className="text-sm sm:text-base font-semibold text-slate-700 leading-snug">
+                      <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
+                      <span className="text-sm sm:text-base font-semibold text-primary leading-snug">
                         {point}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="rounded-xl border border-slate-200/90 bg-white p-5 shadow-xs flex items-start gap-3.5">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-[#102B4E] mt-0.5">
+                <div className="rounded-xl border border-border bg-card p-5 shadow-xs flex items-start gap-3.5">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary mt-0.5">
                     <Info className="h-4 w-4" />
                   </span>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    <strong className="text-[#102B4E] font-semibold">Scope of Service:</strong>{" "}
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                    <strong className="text-primary font-semibold">Scope of Service:</strong>{" "}
                     Legal entity formation, tax, regulatory and real-estate advisory are outside scope unless provided through qualified partners.
                   </p>
                 </div>
               </div>
 
               <div className="lg:col-span-5">
-                <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
+                <div className="relative rounded-2xl overflow-hidden border border-border shadow-lg">
                   <img
                     src="/assets/gcc-enterprise-hub-exact.jpg"
                     alt="Global Capability Centre in India"
@@ -315,22 +312,22 @@ export function GCCView() {
           </div>
         </section>
 
-        {/* Section 5: Exact Horizontal Navy Bottom Banner (NO GIANT FORM, NO EMPTY SPACE!) */}
-        <section className="bg-[#102B4E] text-white py-8 lg:py-10 border-t border-white/10">
+        {/* Section 5: ConfigUSA Theme Horizontal Navy Bottom Banner */}
+        <section className="bg-primary text-primary-foreground py-10 lg:py-12 border-t border-primary/20">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-5">
-                <h2 className="text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-tight">
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight">
                   Planning or scaling a GCC in India?
                 </h2>
               </div>
-              <div className="lg:col-span-4 text-slate-200 text-sm lg:text-base lg:border-l lg:border-white/20 lg:pl-6 leading-relaxed">
+              <div className="lg:col-span-4 text-primary-foreground/80 text-sm sm:text-base lg:border-l lg:border-white/20 lg:pl-6 leading-relaxed">
                 Talk to our team about market insights, talent availability and engagement structures.
               </div>
               <div className="lg:col-span-3 lg:text-right">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 rounded bg-gold px-6 py-3 text-sm font-bold text-primary shadow-md hover:bg-gold/90 transition-all"
+                  className="inline-flex items-center gap-2 rounded bg-gold px-6 py-3 text-sm font-semibold text-primary shadow-sm hover:bg-gold/90 transition-all"
                 >
                   Discuss Your GCC Plans
                   <ArrowRight className="h-4 w-4" />

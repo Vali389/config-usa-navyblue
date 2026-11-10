@@ -28,6 +28,9 @@ export type HeroImageKey =
   | "technology"
   | "global"
   | "careers"
+  | "palantir"
+  | "fde"
+  | "gcc"
   | "contact";
 
 const imageByKey: Record<HeroImageKey, string> = {
@@ -56,6 +59,9 @@ const imageByKey: Record<HeroImageKey, string> = {
   technology: "/assets/ind-technology.jpg",
   global: globalImage,
   careers: "/assets/hero-careers-clean.jpg?v=6",
+  palantir: "/assets/hero-palantir.jpg",
+  fde: "/assets/hero-fde.png",
+  gcc: "/assets/hero-gcc.jpg",
   contact: "/assets/hero-contact-final.jpg",
 };
 

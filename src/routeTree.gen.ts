@@ -15,9 +15,12 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AccessibilityRouteImport } from './routes/accessibility'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ForwardDeployedEngineeringRouteImport } from './routes/forward-deployed-engineering'
+import { Route as GccRouteImport } from './routes/gcc'
 import { Route as GlobalPresenceRouteImport } from './routes/global-presence'
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as LeadershipRouteImport } from './routes/leadership'
+import { Route as PalantirRouteImport } from './routes/palantir'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as WhyConfigusaRouteImport } from './routes/why-configusa'
@@ -25,6 +28,9 @@ import { Route as ExpertiseAiDataDigitalRouteImport } from './routes/expertise.a
 import { Route as ExpertiseCloudInfrastructureRouteImport } from './routes/expertise.cloud-infrastructure'
 import { Route as ExpertiseSapRouteImport } from './routes/expertise.sap'
 import { Route as ExpertiseWorkdayRouteImport } from './routes/expertise.workday'
+import { Route as ServicesForwardDeployedEngineeringRouteImport } from './routes/services.forward-deployed-engineering'
+import { Route as ServicesGccRouteImport } from './routes/services.gcc'
+import { Route as ServicesPalantirRouteImport } from './routes/services.palantir'
 import { Route as SolutionsItStaffingRouteImport } from './routes/solutions.it-staffing'
 import { Route as SolutionsMspVmsRouteImport } from './routes/solutions.msp-vms'
 import { Route as SolutionsTechnologyConsultingRouteImport } from './routes/solutions.technology-consulting'
@@ -60,6 +66,17 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ForwardDeployedEngineeringRoute =
+  ForwardDeployedEngineeringRouteImport.update({
+    id: '/forward-deployed-engineering',
+    path: '/forward-deployed-engineering',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GccRoute = GccRouteImport.update({
+  id: '/gcc',
+  path: '/gcc',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GlobalPresenceRoute = GlobalPresenceRouteImport.update({
   id: '/global-presence',
   path: '/global-presence',
@@ -73,6 +90,11 @@ const IndustriesRoute = IndustriesRouteImport.update({
 const LeadershipRoute = LeadershipRouteImport.update({
   id: '/leadership',
   path: '/leadership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PalantirRoute = PalantirRouteImport.update({
+  id: '/palantir',
+  path: '/palantir',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -111,6 +133,22 @@ const ExpertiseWorkdayRoute = ExpertiseWorkdayRouteImport.update({
   path: '/expertise/workday',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesForwardDeployedEngineeringRoute =
+  ServicesForwardDeployedEngineeringRouteImport.update({
+    id: '/services/forward-deployed-engineering',
+    path: '/services/forward-deployed-engineering',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesGccRoute = ServicesGccRouteImport.update({
+  id: '/services/gcc',
+  path: '/services/gcc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesPalantirRoute = ServicesPalantirRouteImport.update({
+  id: '/services/palantir',
+  path: '/services/palantir',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SolutionsItStaffingRoute = SolutionsItStaffingRouteImport.update({
   id: '/solutions/it-staffing',
   path: '/solutions/it-staffing',
@@ -141,9 +179,12 @@ export interface FileRoutesByFullPath {
   '/accessibility': typeof AccessibilityRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
+  '/forward-deployed-engineering': typeof ForwardDeployedEngineeringRoute
+  '/gcc': typeof GccRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/industries': typeof IndustriesRoute
   '/leadership': typeof LeadershipRoute
+  '/palantir': typeof PalantirRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/why-configusa': typeof WhyConfigusaRoute
@@ -151,6 +192,9 @@ export interface FileRoutesByFullPath {
   '/expertise/cloud-infrastructure': typeof ExpertiseCloudInfrastructureRoute
   '/expertise/sap': typeof ExpertiseSapRoute
   '/expertise/workday': typeof ExpertiseWorkdayRoute
+  '/services/forward-deployed-engineering': typeof ServicesForwardDeployedEngineeringRoute
+  '/services/gcc': typeof ServicesGccRoute
+  '/services/palantir': typeof ServicesPalantirRoute
   '/solutions/it-staffing': typeof SolutionsItStaffingRoute
   '/solutions/msp-vms': typeof SolutionsMspVmsRoute
   '/solutions/technology-consulting': typeof SolutionsTechnologyConsultingRoute
@@ -163,9 +207,12 @@ export interface FileRoutesByTo {
   '/accessibility': typeof AccessibilityRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
+  '/forward-deployed-engineering': typeof ForwardDeployedEngineeringRoute
+  '/gcc': typeof GccRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/industries': typeof IndustriesRoute
   '/leadership': typeof LeadershipRoute
+  '/palantir': typeof PalantirRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/why-configusa': typeof WhyConfigusaRoute
@@ -173,6 +220,9 @@ export interface FileRoutesByTo {
   '/expertise/cloud-infrastructure': typeof ExpertiseCloudInfrastructureRoute
   '/expertise/sap': typeof ExpertiseSapRoute
   '/expertise/workday': typeof ExpertiseWorkdayRoute
+  '/services/forward-deployed-engineering': typeof ServicesForwardDeployedEngineeringRoute
+  '/services/gcc': typeof ServicesGccRoute
+  '/services/palantir': typeof ServicesPalantirRoute
   '/solutions/it-staffing': typeof SolutionsItStaffingRoute
   '/solutions/msp-vms': typeof SolutionsMspVmsRoute
   '/solutions/technology-consulting': typeof SolutionsTechnologyConsultingRoute
@@ -186,9 +236,12 @@ export interface FileRoutesById {
   '/accessibility': typeof AccessibilityRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
+  '/forward-deployed-engineering': typeof ForwardDeployedEngineeringRoute
+  '/gcc': typeof GccRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/industries': typeof IndustriesRoute
   '/leadership': typeof LeadershipRoute
+  '/palantir': typeof PalantirRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/why-configusa': typeof WhyConfigusaRoute
@@ -196,6 +249,9 @@ export interface FileRoutesById {
   '/expertise/cloud-infrastructure': typeof ExpertiseCloudInfrastructureRoute
   '/expertise/sap': typeof ExpertiseSapRoute
   '/expertise/workday': typeof ExpertiseWorkdayRoute
+  '/services/forward-deployed-engineering': typeof ServicesForwardDeployedEngineeringRoute
+  '/services/gcc': typeof ServicesGccRoute
+  '/services/palantir': typeof ServicesPalantirRoute
   '/solutions/it-staffing': typeof SolutionsItStaffingRoute
   '/solutions/msp-vms': typeof SolutionsMspVmsRoute
   '/solutions/technology-consulting': typeof SolutionsTechnologyConsultingRoute
@@ -210,9 +266,12 @@ export interface FileRouteTypes {
     | '/accessibility'
     | '/careers'
     | '/contact'
+    | '/forward-deployed-engineering'
+    | '/gcc'
     | '/global-presence'
     | '/industries'
     | '/leadership'
+    | '/palantir'
     | '/privacy'
     | '/terms'
     | '/why-configusa'
@@ -220,6 +279,9 @@ export interface FileRouteTypes {
     | '/expertise/cloud-infrastructure'
     | '/expertise/sap'
     | '/expertise/workday'
+    | '/services/forward-deployed-engineering'
+    | '/services/gcc'
+    | '/services/palantir'
     | '/solutions/it-staffing'
     | '/solutions/msp-vms'
     | '/solutions/technology-consulting'
@@ -232,9 +294,12 @@ export interface FileRouteTypes {
     | '/accessibility'
     | '/careers'
     | '/contact'
+    | '/forward-deployed-engineering'
+    | '/gcc'
     | '/global-presence'
     | '/industries'
     | '/leadership'
+    | '/palantir'
     | '/privacy'
     | '/terms'
     | '/why-configusa'
@@ -242,6 +307,9 @@ export interface FileRouteTypes {
     | '/expertise/cloud-infrastructure'
     | '/expertise/sap'
     | '/expertise/workday'
+    | '/services/forward-deployed-engineering'
+    | '/services/gcc'
+    | '/services/palantir'
     | '/solutions/it-staffing'
     | '/solutions/msp-vms'
     | '/solutions/technology-consulting'
@@ -254,9 +322,12 @@ export interface FileRouteTypes {
     | '/accessibility'
     | '/careers'
     | '/contact'
+    | '/forward-deployed-engineering'
+    | '/gcc'
     | '/global-presence'
     | '/industries'
     | '/leadership'
+    | '/palantir'
     | '/privacy'
     | '/terms'
     | '/why-configusa'
@@ -264,6 +335,9 @@ export interface FileRouteTypes {
     | '/expertise/cloud-infrastructure'
     | '/expertise/sap'
     | '/expertise/workday'
+    | '/services/forward-deployed-engineering'
+    | '/services/gcc'
+    | '/services/palantir'
     | '/solutions/it-staffing'
     | '/solutions/msp-vms'
     | '/solutions/technology-consulting'
@@ -277,9 +351,12 @@ export interface RootRouteChildren {
   AccessibilityRoute: typeof AccessibilityRoute
   CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
+  ForwardDeployedEngineeringRoute: typeof ForwardDeployedEngineeringRoute
+  GccRoute: typeof GccRoute
   GlobalPresenceRoute: typeof GlobalPresenceRoute
   IndustriesRoute: typeof IndustriesRoute
   LeadershipRoute: typeof LeadershipRoute
+  PalantirRoute: typeof PalantirRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
   WhyConfigusaRoute: typeof WhyConfigusaRoute
@@ -287,6 +364,9 @@ export interface RootRouteChildren {
   ExpertiseCloudInfrastructureRoute: typeof ExpertiseCloudInfrastructureRoute
   ExpertiseSapRoute: typeof ExpertiseSapRoute
   ExpertiseWorkdayRoute: typeof ExpertiseWorkdayRoute
+  ServicesForwardDeployedEngineeringRoute: typeof ServicesForwardDeployedEngineeringRoute
+  ServicesGccRoute: typeof ServicesGccRoute
+  ServicesPalantirRoute: typeof ServicesPalantirRoute
   SolutionsItStaffingRoute: typeof SolutionsItStaffingRoute
   SolutionsMspVmsRoute: typeof SolutionsMspVmsRoute
   SolutionsTechnologyConsultingRoute: typeof SolutionsTechnologyConsultingRoute
@@ -337,6 +417,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/forward-deployed-engineering': {
+      id: '/forward-deployed-engineering'
+      path: '/forward-deployed-engineering'
+      fullPath: '/forward-deployed-engineering'
+      preLoaderRoute: typeof ForwardDeployedEngineeringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gcc': {
+      id: '/gcc'
+      path: '/gcc'
+      fullPath: '/gcc'
+      preLoaderRoute: typeof GccRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/global-presence': {
       id: '/global-presence'
       path: '/global-presence'
@@ -356,6 +450,13 @@ declare module '@tanstack/react-router' {
       path: '/leadership'
       fullPath: '/leadership'
       preLoaderRoute: typeof LeadershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/palantir': {
+      id: '/palantir'
+      path: '/palantir'
+      fullPath: '/palantir'
+      preLoaderRoute: typeof PalantirRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -407,6 +508,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExpertiseWorkdayRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/forward-deployed-engineering': {
+      id: '/services/forward-deployed-engineering'
+      path: '/services/forward-deployed-engineering'
+      fullPath: '/services/forward-deployed-engineering'
+      preLoaderRoute: typeof ServicesForwardDeployedEngineeringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/gcc': {
+      id: '/services/gcc'
+      path: '/services/gcc'
+      fullPath: '/services/gcc'
+      preLoaderRoute: typeof ServicesGccRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/palantir': {
+      id: '/services/palantir'
+      path: '/services/palantir'
+      fullPath: '/services/palantir'
+      preLoaderRoute: typeof ServicesPalantirRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/solutions/it-staffing': {
       id: '/solutions/it-staffing'
       path: '/solutions/it-staffing'
@@ -445,9 +567,12 @@ const rootRouteChildren: RootRouteChildren = {
   AccessibilityRoute: AccessibilityRoute,
   CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
+  ForwardDeployedEngineeringRoute: ForwardDeployedEngineeringRoute,
+  GccRoute: GccRoute,
   GlobalPresenceRoute: GlobalPresenceRoute,
   IndustriesRoute: IndustriesRoute,
   LeadershipRoute: LeadershipRoute,
+  PalantirRoute: PalantirRoute,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
   WhyConfigusaRoute: WhyConfigusaRoute,
@@ -455,6 +580,10 @@ const rootRouteChildren: RootRouteChildren = {
   ExpertiseCloudInfrastructureRoute: ExpertiseCloudInfrastructureRoute,
   ExpertiseSapRoute: ExpertiseSapRoute,
   ExpertiseWorkdayRoute: ExpertiseWorkdayRoute,
+  ServicesForwardDeployedEngineeringRoute:
+    ServicesForwardDeployedEngineeringRoute,
+  ServicesGccRoute: ServicesGccRoute,
+  ServicesPalantirRoute: ServicesPalantirRoute,
   SolutionsItStaffingRoute: SolutionsItStaffingRoute,
   SolutionsMspVmsRoute: SolutionsMspVmsRoute,
   SolutionsTechnologyConsultingRoute: SolutionsTechnologyConsultingRoute,

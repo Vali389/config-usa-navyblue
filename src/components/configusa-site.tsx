@@ -32,6 +32,11 @@ import { InquiryForm } from "./InquiryForm";
 import { CareersExplorer } from "./CareersExplorer";
 import { PageHero } from "./PageHero";
 import { InteractiveGlobalMap } from "./InteractiveGlobalMap";
+import { PalantirView } from "./PalantirView";
+import { ForwardDeployedEngineeringView } from "./ForwardDeployedEngineeringView";
+import { GCCView } from "./GCCView";
+
+export { PalantirView, ForwardDeployedEngineeringView, GCCView };
 
 import heroImage from "@/assets/configusa-corporate-hero.jpg";
 import platformImage from "@/assets/enterprise-platforms.jpg";
@@ -2520,6 +2525,12 @@ export function ContentView({ slug }: { slug: string; inquiryType?: string }) {
       return <CloudInfrastructureView />;
     case "ai-data-digital":
       return <AIDigitalView />;
+    case "palantir":
+      return <PalantirView />;
+    case "forward-deployed-engineering":
+      return <ForwardDeployedEngineeringView />;
+    case "gcc":
+      return <GCCView />;
     case "industries":
       return <IndustriesView />;
     case "global-presence":

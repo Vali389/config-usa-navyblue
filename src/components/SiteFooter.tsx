@@ -94,6 +94,21 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link to="/services/forward-deployed-engineering" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                  Forward-Deployed Engineering (FDE)
+                </Link>
+              </li>
+              <li>
+                <Link to="/gcc" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                  Global Capability Centers (GCC)
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/palantir" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                  Palantir Foundry & AIP Services
+                </Link>
+              </li>
+              <li>
                 <Link to="/expertise/sap" className="text-primary-foreground/80 transition-colors hover:text-gold">
                   SAP Solutions
                 </Link>

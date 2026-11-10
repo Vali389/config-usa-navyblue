@@ -25,11 +25,14 @@ export const navigationGroups: NavigationGroup[] = [
       { label: "Workforce Solutions", path: "/solutions/workforce-solutions", description: "Tailored workforce programs aligned to your business needs." },
       { label: "MSP & VMS Programs", path: "/solutions/msp-vms", description: "Enterprise delivery with discipline, compliance, and speed." },
       { label: "Technology Consulting & Resource Augmentation", path: "/solutions/technology-consulting", description: "Specialized resources for critical technology initiatives." },
+      { label: "Forward-Deployed Engineering (FDE)", path: "/services/forward-deployed-engineering", description: "Embedded elite engineers delivering operational solutions at the frontline." },
+      { label: "Global Capability Centers (GCC)", path: "/gcc", description: "Establish and scale offshore enterprise capability centers in India." },
     ],
   },
   {
     label: "Expertise",
     items: [
+      { label: "Palantir Foundry & AIP Services", path: "/services/palantir", description: "Ontology architecture, PySpark pipelines, and operational AIP AI applications." },
       { label: "SAP Solutions", path: "/expertise/sap", description: "Functional, technical, and S/4HANA enterprise specialists." },
       { label: "Workday Solutions", path: "/expertise/workday", description: "HCM, Financial Management, Integrations, and optimization." },
       { label: "Cloud & Infrastructure", path: "/expertise/cloud-infrastructure", description: "AWS, Azure, GCP, DevOps, and resilient IT operations." },
@@ -211,6 +214,25 @@ export const jobOpportunities: OpenJobPosition[] = [
       "Strong coding proficiency in TypeScript, JavaScript, or Python.",
       "Demonstrated track record designing maintainable enterprise test frameworks.",
       "Deep understanding of software development lifecycles and agile release processes.",
+    ],
+  },
+  {
+    id: "cfg-pal-09",
+    title: "Palantir Foundry / AIP Data Engineer",
+    category: "AI & Data",
+    location: "United States (Remote)",
+    type: "Contract",
+    experience: "5+ years",
+    description: "Architect and deliver high-impact ontology layers, PySpark pipeline transformations, and AIP AI operational applications on Palantir Foundry.",
+    responsibilities: [
+      "Build and maintain robust PySpark data transformations within Palantir Foundry Code Repositories.",
+      "Design and model enterprise Ontology object types, action types, and link definitions.",
+      "Develop frontline operational applications using Palantir Workshop and Slate.",
+    ],
+    requirements: [
+      "Hands-on expertise with Palantir Foundry platform architecture and Ontology modeling.",
+      "Proficiency in PySpark, SQL, and data pipeline optimization.",
+      "Experience deploying Palantir AIP or large language model workflows is preferred.",
     ],
   },
 ];

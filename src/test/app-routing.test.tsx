@@ -18,11 +18,15 @@ describe("App routing", () => {
 
   it("accepts a complete valid talent inquiry", () => {
     expect(inquirySchema.safeParse({
-      inquiryType: "staffing",
-      name: "Avery Smith",
+      inquiryType: "talent",
+      fullName: "Avery Smith",
       email: "avery@example.com",
       company: "Example Co",
+      phone: "+1 555-0199",
+      country: "United States",
+      subject: "SAP S/4HANA Talent Request",
       message: "We are looking for SAP implementation support.",
+      consent: true,
     }).success).toBe(true);
   });
 
@@ -39,10 +43,45 @@ describe("App routing", () => {
   it("rejects a message shorter than ten characters", () => {
     expect(inquirySchema.safeParse({
       inquiryType: "msp",
-      name: "Avery Smith",
+      fullName: "Avery Smith",
       email: "avery@example.com",
       company: "Example Co",
+      phone: "+1 555-0199",
+      country: "United States",
+      subject: "MSP Inquiry",
       message: "Too short",
+      consent: true,
     }).success).toBe(false);
+  });
+
+  it("verifies all eight primary navigation routes resolve correctly", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const keyRoutes = [
+      "/",
+      "/about",
+      "/why-configusa",
+      "/leadership",
+      "/solutions/it-staffing",
+      "/solutions/workforce-solutions",
+      "/solutions/msp-vms",
+      "/solutions/technology-consulting",
+      "/services/forward-deployed-engineering",
+      "/services/palantir",
+      "/gcc",
+      "/expertise/sap",
+      "/expertise/workday",
+      "/expertise/cloud-infrastructure",
+      "/expertise/ai-data-digital",
+      "/industries",
+      "/global-presence",
+      "/careers",
+      "/contact",
+    ];
+
+    for (const path of keyRoutes) {
+      const matches = router.matchRoutes(path);
+      expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
+    }
   });
 });

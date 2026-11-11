@@ -1926,14 +1926,18 @@ export function SAPView() {
           image="sap"
           primaryCta={{ label: "Request SAP Professionals", to: "/contact" }}
           secondaryCta={{ label: "Workday Solutions", to: "/expertise/workday" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">MISSION-CRITICAL SYSTEMS</p>
-                <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">MISSION-CRITICAL SYSTEMS</p>
+                </div>
+                <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl">
                   Deep SAP Expertise Across Functional and Technical Modules
                 </h2>
 
@@ -1950,8 +1954,8 @@ export function SAPView() {
                   <h3 className="font-display text-xl font-bold text-primary">SAP Capabilities</h3>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
                     {capabilities.map((cap) => (
-                      <div key={cap} className="flex items-center gap-2.5 rounded-sm border border-border bg-card p-3.5 text-xs sm:text-sm font-semibold text-primary">
-                        <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
+                      <div key={cap} className="flex items-center gap-2.5 rounded-xl border border-border bg-card p-4 text-xs sm:text-sm font-semibold text-primary shadow-xs hover:border-gold hover:shadow-sm transition-all border-l-4 border-l-gold">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
                         <span>{cap}</span>
                       </div>
                     ))}
@@ -2018,13 +2022,17 @@ export function WorkdayView() {
           image="workday"
           primaryCta={{ label: "Find Workday Specialists", to: "/contact" }}
           secondaryCta={{ label: "SAP Solutions", to: "/expertise/sap" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">CLOUD ERP & HCM</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">CLOUD ERP & HCM</p>
+                </div>
                 <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
                   End-to-End Workday Implementation and Optimization Support
                 </h2>
@@ -2042,8 +2050,8 @@ export function WorkdayView() {
                   <h3 className="font-display text-xl font-bold text-primary">Workday Capabilities</h3>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
                     {capabilities.map((cap) => (
-                      <div key={cap} className="flex items-center gap-2.5 rounded-sm border border-border bg-card p-3.5 text-xs sm:text-sm font-semibold text-primary">
-                        <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
+                      <div key={cap} className="flex items-center gap-2.5 rounded-xl border border-border bg-card p-4 text-xs sm:text-sm font-semibold text-primary shadow-xs hover:border-gold hover:shadow-sm transition-all border-l-4 border-l-gold">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
                         <span>{cap}</span>
                       </div>
                     ))}
@@ -2429,7 +2437,7 @@ export function GlobalPresenceView() {
               </h2>
               <div className="mt-4 space-y-3 text-sm sm:text-base leading-relaxed text-muted-foreground">
                 <p>
-                  Through ConfigUSA in the United States, Config Solutions Private Limited in India, and Accurate Systems Integrators Inc. in Canada, the business has a cross-market presence that can support client relationships and workforce needs across geographies.
+                  Operating through ConfigUSA in the United States (Global HQ, Plainsboro, NJ), our regional North American hub in Toronto, Canada, and our dedicated Global Delivery and Engineering Center in Hyderabad, India, ConfigUSA delivers as a unified cross-border enterprise partner.
                 </p>
                 <p>
                   Wherever your workforce requirements evolve, our commitment to service, quality, and partnership remains consistent.

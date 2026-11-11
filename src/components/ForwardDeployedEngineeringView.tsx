@@ -91,6 +91,7 @@ export function ForwardDeployedEngineeringView() {
           image="fde"
           primaryCta={{ label: "Discuss an Engineering Need", to: "/contact" }}
           secondaryCta={{ label: "Areas of Work", to: "#areas-of-work" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         {/* Section 1: What FDE Means */}

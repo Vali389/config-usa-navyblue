@@ -18,17 +18,20 @@ export function SiteFooter() {
               />
             </Link>
             <div className="mt-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">CONFIGUSA</p>
-              <p className="mt-1.5 text-base font-medium text-primary-foreground">
-                Enterprise Talent. Technology Expertise. Delivery You Can Trust.
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">CONFIGUSA · EST. 2013</p>
+              <p className="mt-1.5 text-base font-semibold text-primary-foreground">
+                Enterprise Technology & Workforce Solutions Partner
+              </p>
+              <p className="mt-2 text-xs font-medium text-gold/90">
+                Built Around Outcomes. Delivered Through People.
               </p>
               <p className="mt-3 text-sm leading-6 text-primary-foreground/75">
-                Connecting organizations with specialized technology professionals, scalable workforce solutions, and dependable execution across international markets.
+                Connecting global enterprises with specialized technology professionals, managed workforce programs, and forward-deployed engineering across the United States, Canada, and India.
               </p>
             </div>
             <div className="mt-5 flex items-center gap-2 text-xs text-primary-foreground/70">
               <span className="inline-block h-2 w-2 rounded-full bg-emerald-400" />
-              <span>Technology. Talent. Transformation.</span>
+              <span>Enterprise Talent · Workforce Solutions · Technology Expertise</span>
             </div>
           </div>
 
@@ -38,7 +41,7 @@ export function SiteFooter() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link to="/about" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  About Us
+                  About Us (Our Story)
                 </Link>
               </li>
               <li>
@@ -48,12 +51,12 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link to="/leadership" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  Leadership
+                  Executive Leadership
                 </Link>
               </li>
               <li>
                 <Link to="/global-presence" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  Global Presence
+                  Global Footprint & Hubs
                 </Link>
               </li>
               <li>
@@ -69,66 +72,83 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {/* Column 3: Solutions & Expertise */}
+          {/* Column 3: The Three Core Pillars */}
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-gold">Solutions & Expertise</p>
-            <ul className="space-y-2.5 text-sm">
-              <li>
-                <Link to="/solutions/it-staffing" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  IT Staffing & Talent
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions/workforce-solutions" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  Workforce Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions/msp-vms" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  MSP & VMS Programs
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions/technology-consulting" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  Technology Consulting
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/forward-deployed-engineering" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  Forward-Deployed Engineering (FDE)
-                </Link>
-              </li>
-              <li>
-                <Link to="/gcc" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  Global Capability Centers (GCC)
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/palantir" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  Palantir Foundry & AIP Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/expertise/sap" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  SAP Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/expertise/workday" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  Workday Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/expertise/cloud-infrastructure" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  Cloud & Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/expertise/ai-data-digital" className="text-primary-foreground/80 transition-colors hover:text-gold">
-                  AI, Data & Digital Engineering
-                </Link>
-              </li>
-            </ul>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-gold">Three Core Pillars</p>
+            <div className="space-y-4 text-xs">
+              <div>
+                <p className="font-semibold text-white uppercase tracking-wider text-[11px] text-gold/90">1. Enterprise Talent</p>
+                <ul className="mt-1.5 space-y-1.5 text-sm">
+                  <li>
+                    <Link to="/solutions/it-staffing" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                      IT Staffing & Specialist Talent
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/solutions/workforce-solutions" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                      Workforce Solutions & Recruitment
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p className="font-semibold text-white uppercase tracking-wider text-[11px] text-gold/90">2. Workforce Solutions</p>
+                <ul className="mt-1.5 space-y-1.5 text-sm">
+                  <li>
+                    <Link to="/solutions/msp-vms" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                      MSP & VMS Contingent Programs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/services/forward-deployed-engineering" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                      Forward-Deployed Engineering (FDE)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/gcc" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                      Global Capability Centers (GCC)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/solutions/technology-consulting" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                      Technology Consulting & Augmentation
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p className="font-semibold text-white uppercase tracking-wider text-[11px] text-gold/90">3. Technology Expertise</p>
+                <ul className="mt-1.5 space-y-1.5 text-sm">
+                  <li>
+                    <Link to="/services/palantir" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                      Palantir Foundry & AIP Workflows
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/expertise/sap" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                      SAP S/4HANA & Enterprise ERP
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/expertise/workday" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                      Workday HCM & Financials
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/expertise/cloud-infrastructure" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                      Cloud, DevOps & Cyber Infrastructure
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/expertise/ai-data-digital" className="text-primary-foreground/80 transition-colors hover:text-gold">
+                      Applied AI, Data & Digital Engineering
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Column 4: Contact & Global Presence */}

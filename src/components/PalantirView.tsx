@@ -91,6 +91,7 @@ export function PalantirView() {
           image="palantir"
           primaryCta={{ label: "Request Specialist Talent", to: "/contact" }}
           secondaryCta={{ label: "Talent Areas", to: "#talent-areas" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         {/* Section 1: Talent Areas */}

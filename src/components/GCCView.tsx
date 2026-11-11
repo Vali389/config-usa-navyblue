@@ -123,12 +123,13 @@ export function GCCView() {
       <SiteHeader />
       <main className="flex-1">
         <PageHero
-          eyebrow="GCC SOLUTIONS"
-          title="Build and scale your GCC with the right talent and workforce strategy."
-          description="Global Capability Centres are evolving from cost-focused operations into strategic hubs for technology, data, engineering and business services. ConfigUSA supports organisations with specialist talent and workforce solutions aligned to their GCC growth plans."
+          eyebrow="GLOBAL CAPABILITY CENTERS (GCC)"
+          title="Build, Scale and Mature Your Global Capability Center in India."
+          description="ConfigUSA partners with global enterprises to establish, expand and optimize Global Capability Centers in India. From strategic talent acquisition to operational scaling, we provide the talent intelligence and delivery infrastructure for high-performing engineering hubs."
           image="gcc"
           primaryCta={{ label: "Discuss Your GCC Plans", to: "/contact" }}
-          secondaryCta={{ label: "How We Support GCCs", to: "#how-we-support" }}
+          secondaryCta={{ label: "Explore GCC Roadmap", to: "#how-we-support" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         {/* Section 1: How We Support GCCs */}

@@ -209,7 +209,7 @@ export function HomeView() {
               <div className="mb-4 flex items-center gap-3">
                 <span className="h-px w-8 bg-gold" aria-hidden="true" />
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-                  ENTERPRISE TECHNOLOGY & WORKFORCE SOLUTIONS
+                  ENTERPRISE TECHNOLOGY & WORKFORCE SOLUTIONS PARTNER
                 </p>
               </div>
 
@@ -218,7 +218,7 @@ export function HomeView() {
               </h1>
 
               <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
-                ConfigUSA helps organizations meet complex technology and workforce demands by connecting them with specialized professionals, scalable staffing solutions, and dependable delivery across global markets.
+                ConfigUSA connects global enterprises with specialized technology talent, agile workforce solutions, and forward-deployed engineering across North America and India.
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-3.5">
@@ -239,7 +239,7 @@ export function HomeView() {
               </div>
 
               <div className="mt-8 border-l border-gold/70 pl-4 text-xs tracking-wide text-primary-foreground/75">
-                Specialized Talent · Reliable Delivery · Global Reach
+                Enterprise Talent · Workforce Solutions · Technology Expertise · Est. 2013
               </div>
             </div>
 
@@ -273,185 +273,270 @@ export function HomeView() {
         {/* Supporting Trust Points Ribbon */}
         <TrustRibbon />
 
-        {/* SECTION 2 — OUR COMPANY (WHO WE ARE) */}
-        <section className="py-12 sm:py-16 bg-background">
-          <div className="mx-auto grid max-w-[1380px] gap-10 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16 lg:px-12">
-            <div className="relative min-h-[340px] sm:min-h-[440px] overflow-hidden rounded-2xl shadow-xl border border-border bg-slate-900 group">
-              <img
-                src="/assets/who-we-are.jpg"
-                alt="ConfigUSA enterprise leadership team in strategic client consultation"
-                width={1600}
-                height={1067}
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover object-center filter brightness-[1.05] contrast-[1.02] transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
-              <div className="absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 rounded-lg border border-white/20 bg-primary/90 backdrop-blur-md p-3.5 text-white shadow-xl">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-gold/20 text-gold">
-                    <Award className="h-4 w-4" />
-                  </span>
-                  <div>
-                    <p className="text-xs font-semibold tracking-wide text-gold uppercase">Enterprise Delivery</p>
-                    <p className="text-xs text-white/85">People · Technology · Partnership</p>
+        {/* SECTION 2 — OUR COMPANY (WHO WE ARE - GOLD CORPORATE STORY) */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-background">
+          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+            <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
+              <div className="relative min-h-[340px] sm:min-h-[440px] overflow-hidden rounded-2xl shadow-xl border border-border bg-slate-900 group">
+                <img
+                  src="/assets/who-we-are.jpg"
+                  alt="ConfigUSA enterprise leadership team in strategic client consultation"
+                  width={1600}
+                  height={1067}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover object-center filter brightness-[1.05] contrast-[1.02] transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 rounded-lg border border-white/20 bg-primary/90 backdrop-blur-md p-3.5 text-white shadow-xl">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-gold/20 text-gold">
+                      <Award className="h-4 w-4" />
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold tracking-wide text-gold uppercase">Enterprise Delivery Partner</p>
+                      <p className="text-xs text-white/85">Built Around Outcomes · Delivered Through People</p>
+                    </div>
                   </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">WHO WE ARE</p>
+                </div>
+                <h2 className="font-display text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-[40px]">
+                  Built Around Outcomes. <span className="text-slate-brand">Delivered Through People.</span>
+                </h2>
+
+                <div className="mt-5 space-y-3.5 text-sm sm:text-base leading-relaxed text-muted-foreground">
+                  <p>
+                    Since 2013, ConfigUSA has connected high-growth enterprises and public sector leaders with specialized technology talent, agile workforce solutions, and forward-deployed engineering.
+                  </p>
+                  <p>
+                    We believe true digital transformation is not simply about acquiring headcount—it is about securing practitioners who understand technical architectures, integrate smoothly into team cultures, and hold themselves accountable to business objectives.
+                  </p>
+                  <p>
+                    Operating across the United States, Canada, and India, ConfigUSA combines global recruiting velocity with senior, consultative partnership to help enterprises build the teams that move business forward.
+                  </p>
+                </div>
+
+                <blockquote className="mt-5 border-l-2 border-gold pl-4 py-1 text-sm sm:text-base font-semibold text-primary">
+                  We don't simply fill positions. We help organizations build the capabilities that move business forward.
+                </blockquote>
+
+                <div className="mt-6 flex items-center gap-4">
+                  <Link
+                    to="/about"
+                    className="inline-flex items-center gap-2 border-b border-gold pb-1 text-sm font-semibold text-primary hover:text-slate-brand transition-colors"
+                  >
+                    Explore our company story, values & leadership
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
                 </div>
               </div>
             </div>
 
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">WHO WE ARE</p>
-              <h2 className="mt-2 font-display text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-[40px]">
-                Your Strategic Partner in Technology Talent and Workforce Solutions
-              </h2>
-
-              <div className="mt-5 space-y-3.5 text-sm sm:text-base leading-relaxed text-muted-foreground">
-                <p>
-                  In today's rapidly evolving business environment, access to the right expertise is essential to achieving business objectives.
-                </p>
-                <p>
-                  ConfigUSA partners with organizations to address complex workforce challenges through specialized IT staffing, enterprise technology talent, and flexible workforce solutions.
-                </p>
-                <p>
-                  Our approach combines an understanding of client requirements, disciplined talent acquisition, and a commitment to consistent delivery across the United States, India, and Canada.
+            {/* THREE STRATEGIC VALUE PILLARS (FROM GOLD) */}
+            <div className="mt-14 grid gap-6 sm:grid-cols-3">
+              <div className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-all border-t-4 border-t-gold">
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold mb-4">
+                  <Award className="h-5 w-5" />
+                </div>
+                <h3 className="text-lg font-bold text-primary tracking-tight mb-2">Excellence</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Every placement, every engagement, held to the standard of your most critical initiative.
                 </p>
               </div>
 
-              <blockquote className="mt-5 border-l-2 border-gold pl-4 py-1 text-sm sm:text-base font-semibold text-primary">
-                We don't simply fill positions. We help organizations build the teams that move business forward.
-              </blockquote>
+              <div className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-all border-t-4 border-t-gold">
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold mb-4">
+                  <Globe2 className="h-5 w-5" />
+                </div>
+                <h3 className="text-lg font-bold text-primary tracking-tight mb-2">Global Reach</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  United States, Canada, and India delivery centers operating as a single unified force.
+                </p>
+              </div>
 
-              <div className="mt-6">
-                <Link
-                  to="/about"
-                  className="inline-flex items-center gap-2 border-b border-gold pb-1 text-sm font-semibold text-primary hover:text-slate-brand transition-colors"
-                >
-                  Explore our company history and leadership
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
+              <div className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-all border-t-4 border-t-gold">
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold mb-4">
+                  <ShieldCheck className="h-5 w-5" />
+                </div>
+                <h3 className="text-lg font-bold text-primary tracking-tight mb-2">Trust</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Over a decade of building enduring relationships, not just filling transactional reqs.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* SECTION 3 — OUR SOLUTIONS (WHAT WE DO) */}
-        <section className="bg-[#F8F9F7]/70 dark:bg-muted/10 py-10 sm:py-12 lg:py-14 border-y border-border">
+        {/* SECTION 3 — THE THREE CORE PILLARS (ENTERPRISE TALENT, WORKFORCE SOLUTIONS, TECHNOLOGY EXPERTISE) */}
+        <section className="bg-[#F8F9F7]/70 dark:bg-muted/10 py-12 sm:py-16 lg:py-20 border-y border-border">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">WHAT WE DO</p>
-              <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
-                Workforce Solutions Built Around Your Business
+            <div className="max-w-3xl mb-12">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
+                  OUR THREE CORE PILLARS
+                </p>
+              </div>
+              <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl lg:text-[42px] tracking-tight leading-tight">
+                Enterprise Technology & Workforce Solutions
               </h2>
-              <p className="mt-2 text-sm sm:text-base text-muted-foreground">
-                Disciplined recruiting models and technical competencies configured to meet exact organizational needs.
+              <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                A unified delivery model aligning specialized technology talent, agile contingent workforce programs, and deep platform implementation expertise.
               </p>
             </div>
 
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {/* Solution 1 */}
-              <div className="group flex flex-col justify-between rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-5 shadow-sm border-t-4 border-t-gold hover:border-t-gold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 h-full">
+            <div className="grid gap-8 lg:grid-cols-3">
+              {/* PILLAR 1: ENTERPRISE TALENT */}
+              <div className="group flex flex-col justify-between rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-7 shadow-sm border-t-4 border-t-gold hover:border-t-gold transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/15">01</span>
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-secondary text-primary group-hover:text-gold group-hover:bg-primary transition-colors">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-mono text-xs font-bold text-gold px-3 py-1 rounded-full bg-gold/15">
+                      Pillar 01
+                    </span>
+                    <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-slate-100 dark:bg-secondary text-primary group-hover:text-gold group-hover:bg-primary transition-colors">
                       <Users className="h-5 w-5" aria-hidden="true" />
                     </div>
                   </div>
-                  <h3 className="mt-3.5 font-display text-lg font-bold text-primary group-hover:text-gold transition-colors">
-                    IT Staffing & Talent Solutions
+
+                  <h3 className="font-display text-2xl font-bold text-primary group-hover:text-gold transition-colors">
+                    Enterprise Talent
                   </h3>
-                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                    Access specialized technology professionals for contract, permanent, and project-based requirements.
+                  <p className="mt-2.5 text-sm text-muted-foreground leading-relaxed">
+                    Specialized IT staffing, niche technical recruitment, and flexible talent delivery models configured to meet critical project and permanent requirements.
                   </p>
+
+                  <div className="mt-6 space-y-2.5 border-t border-border/70 pt-5">
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>IT Staffing (Contract & Contract-to-Hire)</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>Specialist Executive & Lead Search</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>Rapid Talent Bench & Ramp-Up Mobilization</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>Direct Placement & Niche Skill Sourcing</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-5 pt-3.5 border-t border-border/70 flex items-center justify-between">
+
+                <div className="mt-8 pt-4 border-t border-border/70 flex items-center justify-between">
                   <Link
                     to="/solutions/it-staffing"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary group-hover:text-gold transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-primary group-hover:text-gold transition-colors"
                   >
-                    <span>Explore More</span>
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                    <span>Explore Talent Solutions</span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>
 
-              {/* Solution 2 */}
-              <div className="group flex flex-col justify-between rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-5 shadow-sm border-t-4 border-t-gold hover:border-t-gold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 h-full">
+              {/* PILLAR 2: WORKFORCE SOLUTIONS */}
+              <div className="group flex flex-col justify-between rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-7 shadow-sm border-t-4 border-t-gold hover:border-t-gold transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/15">02</span>
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-secondary text-primary group-hover:text-gold group-hover:bg-primary transition-colors">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-mono text-xs font-bold text-gold px-3 py-1 rounded-full bg-gold/15">
+                      Pillar 02
+                    </span>
+                    <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-slate-100 dark:bg-secondary text-primary group-hover:text-gold group-hover:bg-primary transition-colors">
                       <Network className="h-5 w-5" aria-hidden="true" />
                     </div>
                   </div>
-                  <h3 className="mt-3.5 font-display text-lg font-bold text-primary group-hover:text-gold transition-colors">
-                    MSP & VMS Workforce Delivery
+
+                  <h3 className="font-display text-2xl font-bold text-primary group-hover:text-gold transition-colors">
+                    Workforce Solutions
                   </h3>
-                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                    Support enterprise workforce programs with structured recruitment, responsive submissions, and delivery discipline.
+                  <p className="mt-2.5 text-sm text-muted-foreground leading-relaxed">
+                    Scalable workforce delivery programs designed for enterprise governance, supplier compliance, operational agility, and cross-border delivery.
                   </p>
+
+                  <div className="mt-6 space-y-2.5 border-t border-border/70 pt-5">
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>MSP & VMS Contingent Workforce Programs</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>Forward-Deployed Engineering (FDE)</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>Global Capability Centers (GCC) Enablement</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>Managed Workforce & SOW Engagements</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-5 pt-3.5 border-t border-border/70 flex items-center justify-between">
+
+                <div className="mt-8 pt-4 border-t border-border/70 flex items-center justify-between">
                   <Link
                     to="/solutions/msp-vms"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary group-hover:text-gold transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-primary group-hover:text-gold transition-colors"
                   >
-                    <span>Explore More</span>
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                    <span>Explore Workforce Programs</span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>
 
-              {/* Solution 3 */}
-              <div className="group flex flex-col justify-between rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-5 shadow-sm border-t-4 border-t-gold hover:border-t-gold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 h-full">
+              {/* PILLAR 3: TECHNOLOGY EXPERTISE */}
+              <div className="group flex flex-col justify-between rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-7 shadow-sm border-t-4 border-t-gold hover:border-t-gold transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/15">03</span>
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-secondary text-primary group-hover:text-gold group-hover:bg-primary transition-colors">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-mono text-xs font-bold text-gold px-3 py-1 rounded-full bg-gold/15">
+                      Pillar 03
+                    </span>
+                    <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-slate-100 dark:bg-secondary text-primary group-hover:text-gold group-hover:bg-primary transition-colors">
                       <Layers className="h-5 w-5" aria-hidden="true" />
                     </div>
                   </div>
-                  <h3 className="mt-3.5 font-display text-lg font-bold text-primary group-hover:text-gold transition-colors">
-                    Enterprise Applications
-                  </h3>
-                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                    Connect with SAP, Workday, and enterprise application specialists supporting critical business systems.
-                  </p>
-                </div>
-                <div className="mt-5 pt-3.5 border-t border-border/70 flex items-center justify-between">
-                  <Link
-                    to="/expertise/sap"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary group-hover:text-gold transition-colors"
-                  >
-                    <span>Explore More</span>
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                </div>
-              </div>
 
-              {/* Solution 4 */}
-              <div className="group flex flex-col justify-between rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-5 shadow-sm border-t-4 border-t-gold hover:border-t-gold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 h-full">
-                <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/15">04</span>
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-secondary text-primary group-hover:text-gold group-hover:bg-primary transition-colors">
-                      <Server className="h-5 w-5" aria-hidden="true" />
+                  <h3 className="font-display text-2xl font-bold text-primary group-hover:text-gold transition-colors">
+                    Technology Expertise
+                  </h3>
+                  <p className="mt-2.5 text-sm text-muted-foreground leading-relaxed">
+                    Practitioner-led technical competencies across market-leading enterprise platforms, modern data architectures, and operational AI pipelines.
+                  </p>
+
+                  <div className="mt-6 space-y-2.5 border-t border-border/70 pt-5">
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>SAP S/4HANA & Enterprise ERP</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>Workday HCM & Financial Management</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>Palantir Foundry & AIP Operational Workflows</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-primary">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                      <span>Cloud (AWS/Azure/GCP), Data & Applied AI</span>
                     </div>
                   </div>
-                  <h3 className="mt-3.5 font-display text-lg font-bold text-primary group-hover:text-gold transition-colors">
-                    Cloud, Data & Digital Talent
-                  </h3>
-                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                    Build teams across cloud infrastructure, data engineering, AI, software development, and automation.
-                  </p>
                 </div>
-                <div className="mt-5 pt-3.5 border-t border-border/70 flex items-center justify-between">
+
+                <div className="mt-8 pt-4 border-t border-border/70 flex items-center justify-between">
                   <Link
-                    to="/expertise/cloud-infrastructure"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary group-hover:text-gold transition-colors"
+                    to="/services/palantir"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-primary group-hover:text-gold transition-colors"
                   >
-                    <span>Explore More</span>
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                    <span>Explore Technology Expertise</span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>
@@ -459,126 +544,162 @@ export function HomeView() {
           </div>
         </section>
 
-        {/* SECTION 4 — WHY CONFIGUSA (OUR DIFFERENCE) */}
-        <section className="py-10 sm:py-12 lg:py-14 bg-background">
+        {/* SECTION 4 — OUTCOME DELIVERY FRAMEWORK (4 STAGES FROM GOLD) */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-background">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">OUR DIFFERENCE</p>
-              <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
-                More Than a Staffing Provider. A Partner Accountable to Your Success.
+            <div className="max-w-3xl mb-12">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
+                  OUR METHODOLOGY
+                </p>
+              </div>
+              <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl lg:text-[40px] tracking-tight leading-tight">
+                4-Stage Outcome Delivery Framework
               </h2>
-              <p className="mt-2 text-sm sm:text-base leading-relaxed text-muted-foreground">
-                Enterprise workforce programs demand more than resumes. They require responsiveness, relevant expertise, clear communication, and consistent execution.
+              <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                How we turn business requirements into dependable, practitioner-validated technology capability.
               </p>
             </div>
 
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {/* Point 1 */}
-              <div className="group rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-gold hover:shadow-lg hover:-translate-y-0.5 flex flex-col justify-between h-full border-t-4 border-t-slate-brand/40 hover:border-t-gold">
-                <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/10 border border-gold/20">01</span>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200/80 dark:border-border bg-slate-50 dark:bg-secondary text-primary group-hover:text-gold group-hover:border-gold/50 transition-colors">
-                      <Briefcase className="h-5 w-5" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  step: "01",
+                  title: "Understand",
+                  sub: "Align to Objectives",
+                  desc: "Align talent, stack requirements, and technology deliverables to tangible enterprise business goals.",
+                },
+                {
+                  step: "02",
+                  title: "Match & Vet",
+                  sub: "Practitioner-Led Screening",
+                  desc: "Rigorous technical screening conducted by seasoned practitioners who evaluate hands-on architectural and platform depth.",
+                },
+                {
+                  step: "03",
+                  title: "Deliver",
+                  sub: "Rapid Onboarding & SLAs",
+                  desc: "Disciplined onboarding, seamless integration, dedicated account management, and strict SLA governance.",
+                },
+                {
+                  step: "04",
+                  title: "Grow",
+                  sub: "Long-Term Partnership",
+                  desc: "Ongoing communication, transparent reviews, proactive retention, and multi-year partnership momentum.",
+                },
+              ].map((stage) => (
+                <div
+                  key={stage.step}
+                  className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 border-t-gold/80 hover:border-t-gold"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/15">
+                        {stage.step}
+                      </span>
+                      <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                        {stage.title}
+                      </span>
                     </div>
+                    <h3 className="text-base font-bold text-primary mb-2">
+                      {stage.sub}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                      {stage.desc}
+                    </p>
                   </div>
-                  <h3 className="mt-4 text-base font-bold text-primary group-hover:text-gold transition-colors">Enterprise-focused expertise</h3>
-                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                    An understanding of complex hiring requirements, technology roles, and client delivery expectations.
-                  </p>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              {/* Point 2 */}
-              <div className="group rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-gold hover:shadow-lg hover:-translate-y-0.5 flex flex-col justify-between h-full border-t-4 border-t-slate-brand/40 hover:border-t-gold">
-                <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/10 border border-gold/20">02</span>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200/80 dark:border-border bg-slate-50 dark:bg-secondary text-primary group-hover:text-gold group-hover:border-gold/50 transition-colors">
-                      <UserCheck className="h-5 w-5" />
-                    </div>
-                  </div>
-                  <h3 className="mt-4 text-base font-bold text-primary group-hover:text-gold transition-colors">Specialized recruiting capabilities</h3>
-                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                    Access to professionals across enterprise applications, infrastructure, data, engineering, and emerging technologies.
-                  </p>
-                </div>
+        {/* SECTION 5 — GUIDING PRINCIPLES (5 VALUES FROM GOLD) */}
+        <section className="py-12 sm:py-16 bg-slate-50/70 border-t border-border/80">
+          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+            <div className="max-w-3xl mb-12">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
+                  OUR GUIDING PRINCIPLES
+                </p>
               </div>
-
-              {/* Point 3 */}
-              <div className="group rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-gold hover:shadow-lg hover:-translate-y-0.5 flex flex-col justify-between h-full border-t-4 border-t-slate-brand/40 hover:border-t-gold">
-                <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/10 border border-gold/20">03</span>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200/80 dark:border-border bg-slate-50 dark:bg-secondary text-primary group-hover:text-gold group-hover:border-gold/50 transition-colors">
-                      <ShieldCheck className="h-5 w-5" />
-                    </div>
-                  </div>
-                  <h3 className="mt-4 text-base font-bold text-primary group-hover:text-gold transition-colors">MSP/VMS experience</h3>
-                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                    Familiarity with structured submissions, program processes, onboarding coordination, and workforce compliance.
-                  </p>
-                </div>
-              </div>
-
-              {/* Point 4 */}
-              <div className="group rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-gold hover:shadow-lg hover:-translate-y-0.5 flex flex-col justify-between h-full border-t-4 border-t-slate-brand/40 hover:border-t-gold">
-                <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/10 border border-gold/20">04</span>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200/80 dark:border-border bg-slate-50 dark:bg-secondary text-primary group-hover:text-gold group-hover:border-gold/50 transition-colors">
-                      <Layers className="h-5 w-5" />
-                    </div>
-                  </div>
-                  <h3 className="mt-4 text-base font-bold text-primary group-hover:text-gold transition-colors">Flexible engagement models</h3>
-                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                    Workforce support aligned with immediate hiring needs and longer-term business initiatives.
-                  </p>
-                </div>
-              </div>
-
-              {/* Point 5 */}
-              <div className="group rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-gold hover:shadow-lg hover:-translate-y-0.5 flex flex-col justify-between h-full border-t-4 border-t-slate-brand/40 hover:border-t-gold">
-                <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/10 border border-gold/20">05</span>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200/80 dark:border-border bg-slate-50 dark:bg-secondary text-primary group-hover:text-gold group-hover:border-gold/50 transition-colors">
-                      <Globe2 className="h-5 w-5" />
-                    </div>
-                  </div>
-                  <h3 className="mt-4 text-base font-bold text-primary group-hover:text-gold transition-colors">Global delivery reach</h3>
-                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                    Recruiting and business presence across the United States, India, and Canada.
-                  </p>
-                </div>
-              </div>
-
-              {/* Point 6 */}
-              <div className="group rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-gold hover:shadow-lg hover:-translate-y-0.5 flex flex-col justify-between h-full border-t-4 border-t-slate-brand/40 hover:border-t-gold">
-                <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/10 border border-gold/20">06</span>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200/80 dark:border-border bg-slate-50 dark:bg-secondary text-primary group-hover:text-gold group-hover:border-gold/50 transition-colors">
-                      <TrendingUp className="h-5 w-5" />
-                    </div>
-                  </div>
-                  <h3 className="mt-4 text-base font-bold text-primary group-hover:text-gold transition-colors">Relationship-driven service</h3>
-                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                    A commitment to accountability, transparency, and enduring client partnerships.
-                  </p>
-                </div>
-              </div>
+              <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl lg:text-[40px] tracking-tight leading-tight">
+                Five Guiding Principles That Define How We Work
+              </h2>
+              <p className="mt-2 text-sm sm:text-base leading-relaxed text-muted-foreground">
+                Enterprise workforce and technology initiatives demand uncompromised standards, genuine collaboration, and total accountability.
+              </p>
             </div>
 
-            <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-border pt-6">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  title: "Integrity",
+                  quote: "We do the right thing — always — even when no one is watching.",
+                  desc: "Ethical execution, candidate transparency, and straightforward guidance on every engagement.",
+                },
+                {
+                  title: "Excellence",
+                  quote: "We hold ourselves to the highest standards in everything we deliver.",
+                  desc: "Practitioner-level quality across technical vetting, onboarding velocity, and candidate preparation.",
+                },
+                {
+                  title: "Collaboration",
+                  quote: "Our best work happens together — with clients and with each other.",
+                  desc: "Embedding seamlessly into enterprise processes, VMS platforms, and delivery sprints.",
+                },
+                {
+                  title: "Innovation",
+                  quote: "We embrace new ideas and technologies to solve tomorrow's challenges.",
+                  desc: "Leading in forward-deployed engineering, Palantir AIP adoption, and modern GCC establishment.",
+                },
+                {
+                  title: "Accountability",
+                  quote: "We own our commitments and deliver on our promises.",
+                  desc: "Clear SLAs, responsive communication, and dependable execution from contract signing to final delivery.",
+                },
+                {
+                  title: "Continuous Growth",
+                  quote: "Enduring relationships built on sustained, measurable performance.",
+                  desc: "Expanding value over time through proactive talent planning and long-term client trust.",
+                },
+              ].map((item, idx) => (
+                <div
+                  key={item.title}
+                  className="group rounded-xl border border-slate-200/90 dark:border-border bg-white dark:bg-card p-6 shadow-sm transition-all duration-300 hover:border-gold hover:shadow-lg hover:-translate-y-0.5 flex flex-col justify-between h-full border-t-4 border-t-primary/60 hover:border-t-gold"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/10 border border-gold/20">
+                        0{idx + 1}
+                      </span>
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                    </div>
+                    <h3 className="text-lg font-bold text-primary group-hover:text-gold transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-xs sm:text-sm font-medium text-primary/80 italic leading-snug">
+                      "{item.quote}"
+                    </p>
+                    <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-border pt-6">
               <p className="text-xs sm:text-sm text-muted-foreground">
-                Explore our specialized delivery frameworks, client partnerships, and compliance rigor.
+                Discover how our outcome-driven engagement model supports enterprise scale and compliance.
               </p>
               <Link
                 to="/why-configusa"
                 className="inline-flex items-center gap-2 border-b border-gold pb-1 text-sm font-semibold text-primary hover:text-slate-brand transition-colors shrink-0"
               >
-                Learn why clients choose ConfigUSA
+                Learn why enterprises partner with ConfigUSA
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             </div>
@@ -810,116 +931,349 @@ export function HomeView() {
    2. ABOUT CONFIGUSA VIEW (/about)
    ========================================================================= */
 export function AboutView() {
+  const threePillars = [
+    {
+      title: "Excellence",
+      desc: "Every placement, every engagement, held to the standard of your most critical initiative.",
+      icon: Award,
+    },
+    {
+      title: "Global Reach",
+      desc: "United States, Canada, and India delivery centers operating as a single unified force.",
+      icon: Globe2,
+    },
+    {
+      title: "Trust",
+      desc: "A decade of building relationships, not just filling reqs.",
+      icon: ShieldCheck,
+    },
+  ];
+
+  const fourStageApproach = [
+    {
+      step: "01",
+      name: "Understand",
+      title: "Align to Real Objectives",
+      desc: "We start by deeply analyzing your technology stack, delivery roadmap, architectural constraints, and organizational culture.",
+    },
+    {
+      step: "02",
+      name: "Match & Vet",
+      title: "Practitioner-Led Screening",
+      desc: "Every candidate undergoes rigorous evaluation by seasoned technology practitioners who have built and deployed on the same platforms.",
+    },
+    {
+      step: "03",
+      name: "Deliver",
+      title: "Rapid Deployment & SLAs",
+      desc: "Structured onboarding protocols, immediate productivity, dedicated account governance, and disciplined SLA tracking from sprint zero.",
+    },
+    {
+      step: "04",
+      name: "Grow",
+      title: "Partnership & Scalability",
+      desc: "Continuous performance reviews, retention assurance, proactive resource forecasting, and multi-year partnership momentum.",
+    },
+  ];
+
+  const guidingPrinciples = [
+    {
+      num: "01",
+      title: "Integrity",
+      statement: "We do the right thing — always — even when no one is watching.",
+      desc: "Uncompromising honesty, transparent communication, and ethical execution form the bedrock of every client and consultant relationship.",
+    },
+    {
+      num: "02",
+      title: "Excellence",
+      statement: "We hold ourselves to the highest standards in everything we deliver.",
+      desc: "We reject the transactional status quo of staffing. Every technical submission and delivery engagement must meet premier enterprise quality.",
+    },
+    {
+      num: "03",
+      title: "Collaboration",
+      statement: "Our best work happens together — with clients and with each other.",
+      desc: "We operate as an integrated extension of our clients' teams, fostering open dialogue, mutual respect, and shared ownership of every outcome.",
+    },
+    {
+      num: "04",
+      title: "Innovation",
+      statement: "We embrace new ideas and technologies to solve tomorrow's challenges.",
+      desc: "From pioneering Forward-Deployed Engineering to enterprise Palantir AIP adoption and GCC scaling, we stay ahead of technological change.",
+    },
+    {
+      num: "05",
+      title: "Accountability",
+      statement: "We own our commitments and deliver on our promises.",
+      desc: "We take full responsibility for our delivery milestones, contractor performance, and SLAs, providing clarity and dependability every day.",
+    },
+  ];
+
   return (
     <div className="site-page min-h-screen bg-background text-foreground flex flex-col">
       <SiteHeader />
       <main className="flex-1">
         <PageHero
           eyebrow="ABOUT CONFIGUSA"
-          title="Built on Trust. Strengthened by Expertise. Driven by Results."
-          description="ConfigUSA is a technology staffing and workforce solutions organization committed to helping businesses succeed through the right people, specialized expertise, and dependable delivery."
+          title="Built Around Outcomes. Delivered Through People."
+          description="Since 2013, ConfigUSA has connected high-growth enterprises and public sector leaders with elite technology talent, forward-deployed engineering, and strategic workforce solutions."
           image="about"
           primaryCta={{ label: "Discover Our Solutions", to: "/solutions/it-staffing" }}
           secondaryCta={{ label: "Contact Leadership", to: "/leadership" }}
+          badgeText="Enterprise Technology & Workforce Solutions Partner · Founded 2013"
         />
 
-        <section className="py-10 sm:py-14 lg:py-16 bg-background">
-          <div className="mx-auto max-w-[1120px] px-5 sm:px-8 lg:px-12">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">OUR COMMITMENT</p>
-              <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl lg:text-[40px]">
-                Lasting Partnerships Earned Through Performance
-              </h2>
-
-              <div className="mt-6 space-y-4 text-sm sm:text-base leading-relaxed text-muted-foreground">
-                <p>
-                  ConfigUSA is a technology staffing and workforce solutions organization committed to helping businesses succeed through the right people, specialized expertise, and dependable delivery.
-                </p>
-                <p>
-                  We work with enterprises, technology organizations, and managed service providers to address evolving workforce requirements across a wide range of technologies and industries.
-                </p>
-                <p>
-                  Our business is built on a simple principle: lasting partnerships are earned through consistent performance, transparency, and a genuine understanding of client needs.
-                </p>
-                <p>
-                  With business operations spanning the United States, India, and Canada, ConfigUSA combines global reach with personalized service, enabling us to support clients navigating complex technology and talent demands.
-                </p>
-              </div>
-
-              {/* Editorial Image Feature */}
-              <div className="mt-10 relative overflow-hidden rounded-lg border border-border shadow-md bg-slate-900">
-                <img
-                  src="/assets/about-approach.jpg?v=4"
-                  alt="ConfigUSA collaborative talent planning and enterprise advisory"
-                  width={1400}
-                  height={700}
-                  loading="lazy"
-                  className="w-full h-64 sm:h-80 lg:h-96 object-cover object-center filter brightness-[1.14] contrast-[1.03] saturate-[1.08]"
-                />
-                <div className="bg-primary/95 backdrop-blur-sm text-primary-foreground px-5 py-3 text-xs flex items-center justify-between border-t border-primary-foreground/20">
-                  <span className="font-semibold text-white">Collaborative Delivery Planning & Enterprise Execution</span>
-                  <span className="text-gold font-mono">U.S. · India · Canada</span>
+        {/* SECTION 1: CORPORATE STORY & BACKGROUND */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-background">
+          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+            <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+              <div className="lg:col-span-7">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
+                    A DECADE OF ENTERPRISE DELIVERY
+                  </p>
                 </div>
-              </div>
+                <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-primary tracking-tight leading-tight">
+                  A Decade of Purpose-Driven Technology & Workforce Partnership
+                </h2>
 
-              {/* Mission & Vision Cards */}
-              <div className="mt-12 grid gap-6 sm:grid-cols-2">
-                <div className="rounded-lg border border-border bg-card p-6 sm:p-7 shadow-sm border-t-4 border-t-gold/70 hover:border-t-gold transition-all">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-gold">Our Mission</p>
-                  <p className="mt-2.5 text-sm sm:text-base leading-relaxed text-foreground font-medium">
-                    To empower organizations with exceptional technology talent and dependable workforce solutions that help advance business priorities, strengthen operational capabilities, and support sustainable growth.
+                <div className="mt-6 space-y-4 text-sm sm:text-base leading-relaxed text-muted-foreground">
+                  <p>
+                    Founded in 2013 and headquartered in Plainsboro, New Jersey, ConfigUSA was created on a single conviction: enterprises navigating mission-critical technology transformations do not simply need more resumes—they need dependable partners who understand technical architectures and take accountability for delivery outcomes.
+                  </p>
+                  <p>
+                    Over the past decade, we have expanded from specialized IT staffing into a comprehensive <strong className="text-primary font-semibold">Enterprise Technology & Workforce Solutions Partner</strong>. Today, our cross-border operations connect Fortune 500 enterprises, hyper-growth technology scale-ups, and public sector organizations across the United States, Canada, and India.
+                  </p>
+                  <p>
+                    Whether mobilizing specialized engineers for complex SAP S/4HANA migrations, embedding Forward-Deployed Engineers into frontline operational workflows, or establishing dedicated Global Capability Centers (GCCs) in Hyderabad, we combine high-touch consultative engagement with global delivery scale.
                   </p>
                 </div>
 
-                <div className="rounded-lg border border-border bg-card p-6 sm:p-7 shadow-sm border-t-4 border-t-gold/70 hover:border-t-gold transition-all">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-gold">Our Vision</p>
-                  <p className="mt-2.5 text-sm sm:text-base leading-relaxed text-foreground font-medium">
-                    To be a trusted global workforce and technology solutions partner, recognized for integrity, expertise, service excellence, and lasting client relationships.
+                <div className="mt-8 border-l-2 border-gold pl-5 py-2">
+                  <p className="text-base sm:text-lg font-display font-semibold text-primary italic">
+                    "We don't simply fill requisitions. We help organizations build the resilient teams, technical competencies, and delivery engines that move business forward."
                   </p>
                 </div>
               </div>
 
-              {/* Core Values */}
-              <div className="mt-12">
-                <h3 className="font-display text-2xl font-bold text-primary">Our Core Values</h3>
-                <div className="mt-5 grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
-                  {[
-                    { title: "Integrity", desc: "Integrity in every interaction." },
-                    { title: "Accountability", desc: "Accountability in every commitment." },
-                    { title: "Excellence", desc: "Excellence in every delivery." },
-                    { title: "Collaboration", desc: "Collaboration in every partnership." },
-                    { title: "Continuous Improvement", desc: "Continuous improvement in everything we do." },
-                  ].map((val) => (
-                    <div key={val.title} className="rounded-lg border border-border bg-card p-4 shadow-sm flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-gold shrink-0 mt-0.5" />
+              <div className="lg:col-span-5">
+                <div className="relative rounded-2xl overflow-hidden border border-border shadow-xl bg-slate-900 group">
+                  <img
+                    src="/assets/who-we-are.jpg"
+                    alt="ConfigUSA enterprise delivery team in strategic consultation"
+                    className="w-full h-80 sm:h-96 lg:h-[430px] object-cover object-center filter brightness-[1.05] contrast-[1.02] group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent pointer-events-none" />
+                  <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl border border-white/20 bg-primary/90 backdrop-blur-md text-white shadow-lg">
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gold/20 text-gold">
+                        <Award className="h-5 w-5" />
+                      </span>
                       <div>
-                        <strong className="block text-sm font-semibold text-primary">{val.title}</strong>
-                        <span className="text-xs text-muted-foreground">{val.desc}</span>
+                        <p className="text-xs font-semibold uppercase tracking-wider text-gold">ConfigUSA Global Footprint</p>
+                        <p className="text-xs text-white/90">Plainsboro (NJ) · Toronto (Canada) · Hyderabad (India)</p>
                       </div>
                     </div>
-                  ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* THREE STRATEGIC VALUE PILLARS (FROM GOLD) */}
+            <div className="mt-14 grid gap-6 sm:grid-cols-3">
+              {threePillars.map((p) => {
+                const Icon = p.icon;
+                return (
+                  <div
+                    key={p.title}
+                    className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-all flex flex-col border-t-4 border-t-gold"
+                  >
+                    <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold mb-4">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-lg font-bold text-primary tracking-tight mb-2">
+                      {p.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {p.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 2: MISSION, VISION & VALUES (3-CARD BLOCK FROM GOLD) */}
+        <section className="py-12 sm:py-16 bg-slate-50/70 border-y border-border/80">
+          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+            <div className="max-w-3xl mb-10">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
+                  OUR PURPOSE
+                </p>
+              </div>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary tracking-tight leading-tight">
+                Mission, Vision and Core Values
+              </h2>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-3">
+              {/* Mission */}
+              <div className="rounded-xl border border-border bg-card p-7 shadow-sm flex flex-col justify-between border-t-4 border-t-primary hover:border-t-gold transition-all">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-bold uppercase tracking-wider text-gold">Strategic Direction</span>
+                    <Target className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-primary mb-3">Our Mission</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Empowering organizations with the technology talent and expertise they need to drive transformation.
+                  </p>
                 </div>
               </div>
 
-              <div className="mt-10 border-l-2 border-gold pl-5 py-2.5">
-                <p className="text-sm sm:text-base font-semibold text-primary">
-                  At ConfigUSA, our success is measured by the confidence our clients place in us and the value we deliver over time.
-                </p>
+              {/* Vision */}
+              <div className="rounded-xl border border-border bg-card p-7 shadow-sm flex flex-col justify-between border-t-4 border-t-primary hover:border-t-gold transition-all">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-bold uppercase tracking-wider text-gold">Future Horizon</span>
+                    <TrendingUp className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-primary mb-3">Our Vision</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    To be the most trusted technology growth partner for enterprises building the digital future.
+                  </p>
+                </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              {/* Values */}
+              <div className="rounded-xl border border-border bg-card p-7 shadow-sm flex flex-col justify-between border-t-4 border-t-primary hover:border-t-gold transition-all">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-bold uppercase tracking-wider text-gold">Guiding Standard</span>
+                    <ShieldCheck className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-primary mb-3">Our Core Values</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Integrity, excellence, partnership, and an unwavering commitment to client success.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 3: 4-STAGE OUTCOME DELIVERY APPROACH (FROM GOLD) */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-background">
+          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+            <div className="max-w-3xl mb-12">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
+                  DELIVERY METHODOLOGY
+                </p>
+              </div>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary tracking-tight leading-tight">
+                Our 4-Stage Outcome Delivery Framework
+              </h2>
+              <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                A disciplined, repeatable engagement lifecycle designed to minimize ramp-up friction, enforce platform standards, and secure long-term value.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {fourStageApproach.map((stage) => (
+                <div
+                  key={stage.step}
+                  className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 border-t-gold/70 hover:border-t-gold"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/15">
+                        {stage.step}
+                      </span>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        {stage.name}
+                      </span>
+                    </div>
+                    <h3 className="text-base font-bold text-primary mb-2.5">
+                      {stage.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                      {stage.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 4: 5 GUIDING PRINCIPLES (FROM GOLD) */}
+        <section className="py-12 sm:py-16 bg-slate-50/70 border-t border-border/80">
+          <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+            <div className="max-w-3xl mb-12">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-brand">
+                  THE PRINCIPLES THAT GUIDE US
+                </p>
+              </div>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary tracking-tight leading-tight">
+                Five Guiding Principles We Live By Every Day
+              </h2>
+              <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                These principles govern how we screen talent, engage clients, support contractors, and scale operations globally.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {guidingPrinciples.map((principle) => (
+                <div
+                  key={principle.title}
+                  className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="font-mono text-xs font-bold text-gold px-2.5 py-0.5 rounded-full bg-gold/15">
+                        {principle.num}
+                      </span>
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                    </div>
+                    <h3 className="text-lg font-bold text-primary mb-1.5">{principle.title}</h3>
+                    <p className="text-xs sm:text-sm font-semibold text-primary/90 mb-2 leading-snug">
+                      "{principle.statement}"
+                    </p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      {principle.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTAs */}
+            <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-border/80 pt-8">
+              <div>
+                <h4 className="text-base font-bold text-primary">Ready to discuss your workforce or technology roadmap?</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground">Our engagement leadership is available across the US, Canada, and India.</p>
+              </div>
+              <div className="flex items-center gap-3">
                 <Link
                   to="/solutions/it-staffing"
-                  className="inline-flex h-11 items-center gap-2 rounded-lg bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-slate-brand transition-colors"
+                  className="inline-flex h-11 items-center gap-2 rounded bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-slate-brand transition-colors"
                 >
-                  Discover Our Solutions
+                  Explore Solutions
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex h-11 items-center gap-2 rounded-lg border border-primary px-6 text-sm font-semibold text-primary shadow-sm hover:bg-secondary transition-colors"
+                  className="inline-flex h-11 items-center gap-2 rounded border border-primary px-6 text-sm font-semibold text-primary shadow-sm hover:bg-secondary transition-colors"
                 >
-                  Contact Our Team
+                  Contact Us
                   <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -941,28 +1295,28 @@ export function WhyConfigUSAView() {
   const differentiators = [
     {
       num: "01",
-      title: "We understand enterprise expectations.",
-      desc: "We recognize the importance of accuracy, timeliness, process discipline, and communication.",
+      title: "Practitioner-Led Technical Vetting",
+      desc: "Our screening processes are led by experienced technologists who evaluate real-world architectural fit, platform depth, and system nuances before any profile reaches your desk.",
     },
     {
       num: "02",
-      title: "We focus on qualified talent.",
-      desc: "Our recruiting approach emphasizes alignment with technical requirements, relevant experience, and client needs.",
+      title: "The Three Core Pillars of Enterprise Execution",
+      desc: "From individual specialist staffing and forward-deployed engineering pods to end-to-end GCC buildouts, our delivery models align with every stage of your growth.",
     },
     {
       num: "03",
-      title: "We understand managed workforce programs.",
-      desc: "Our MSP/VMS experience supports structured recruitment and delivery workflows.",
+      title: "Enterprise Governance & Program Discipline",
+      desc: "Experienced with top-tier MSP/VMS platforms, structured scorecards, compliance rigor, and fast SLA turnaround times across Fortune 500 supplier programs.",
     },
     {
       num: "04",
-      title: "We adapt to business needs.",
-      desc: "Our engagement models support individual hiring requirements and broader workforce initiatives.",
+      title: "Unified Tri-Regional Delivery Network",
+      desc: "Plainsboro NJ Headquarters, Toronto Canadian hub, and Hyderabad Global Capability Center operate collaboratively to provide 24/7 sourcing velocity and cross-border mobility.",
     },
     {
       num: "05",
-      title: "We value long-term partnerships.",
-      desc: "We focus on building trust through responsiveness, consistency, and professional service.",
+      title: "Outcomes Over Transactions Since 2013",
+      desc: "A decade of building trust through high-touch account leadership, transparent communication, contractor retention programs, and measurable business impact.",
     },
   ];
 
@@ -972,19 +1326,23 @@ export function WhyConfigUSAView() {
       <main className="flex-1">
         <PageHero
           eyebrow="THE CONFIGUSA ADVANTAGE"
-          title="The Difference Is in How We Deliver."
-          description="Choosing a workforce partner is about more than finding available talent. It's about working with a team that understands your business priorities, respects your processes, and takes ownership of its commitments."
+          title="Enterprise Delivery Accountability. Practitioner-Led Execution."
+          description="Choosing a technology and workforce partner is about more than sourcing resumes. It's about collaborating with seasoned practitioners who understand your architecture, respect your compliance protocols, and take ownership of delivery outcomes."
           image="why"
           primaryCta={{ label: "Partner With ConfigUSA", to: "/contact" }}
           secondaryCta={{ label: "Explore Our Solutions", to: "/solutions/it-staffing" }}
+          badgeText="Enterprise Technology & Workforce Solutions Partner · Est. 2013"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">OUR DIFFERENTIATORS</p>
-                <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">OUR DIFFERENTIATORS</p>
+                </div>
+                <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl">
                   Accountability to Your Goals at Every Stage
                 </h2>
 
@@ -1012,13 +1370,13 @@ export function WhyConfigUSAView() {
                   {differentiators.map((diff) => (
                     <div
                       key={diff.num}
-                      className="rounded-sm border border-border bg-card p-5 sm:p-6 shadow-sm transition-all hover:border-gold"
+                      className="rounded-xl border border-border bg-card p-5 sm:p-6 shadow-sm transition-all hover:border-gold hover:shadow-md border-l-4 border-l-gold"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="font-mono text-xs font-bold text-gold">{diff.num}</span>
+                        <span className="font-mono text-xs font-bold text-gold px-2 py-0.5 rounded bg-gold/15">{diff.num}</span>
                         <h3 className="text-base font-bold text-primary">{diff.title}</h3>
                       </div>
-                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm pl-7">
+                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm pl-8">
                         {diff.desc}
                       </p>
                     </div>

@@ -1432,20 +1432,24 @@ export function LeadershipView() {
           image="leadership"
           primaryCta={{ label: "Connect With Our Leadership Team", to: "/contact" }}
           secondaryCta={{ label: "About Our Company", to: "/about" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">EXECUTIVE PROFILE</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">EXECUTIVE PROFILE</p>
+                </div>
                 <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
                   Strategic Guidance and International Execution
                 </h2>
 
-                <div className="mt-8 rounded-sm border border-border bg-card p-6 sm:p-8 shadow-sm">
+                <div className="mt-8 rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm border-t-4 border-t-gold">
                   <div className="flex flex-col sm:flex-row gap-6 items-start">
-                    <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-sm bg-primary text-gold border border-gold/40">
+                    <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-xl bg-primary text-gold border border-gold/40">
                       <Award className="h-10 w-10" />
                     </div>
                     <div>
@@ -1469,14 +1473,14 @@ export function LeadershipView() {
                 </div>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-sm border border-border bg-card p-5">
+                  <div className="rounded-xl border border-border bg-card p-5 shadow-xs border-l-4 border-l-gold">
                     <p className="text-xs font-semibold uppercase text-slate-brand">Leadership Pillar</p>
                     <h4 className="mt-1 text-sm font-bold text-primary">Client Trust & Integrity</h4>
                     <p className="mt-1 text-xs text-muted-foreground">
                       Cultivating authentic, transparent relationships that treat client objectives as unbreakable commitments.
                     </p>
                   </div>
-                  <div className="rounded-sm border border-border bg-card p-5">
+                  <div className="rounded-xl border border-border bg-card p-5 shadow-xs border-l-4 border-l-gold">
                     <p className="text-xs font-semibold uppercase text-slate-brand">Leadership Pillar</p>
                     <h4 className="mt-1 text-sm font-bold text-primary">Disciplined Execution</h4>
                     <p className="mt-1 text-xs text-muted-foreground">
@@ -1544,14 +1548,18 @@ export function ITStaffingView() {
           image="itstaffing"
           primaryCta={{ label: "Submit Your Staffing Requirement", to: "/contact" }}
           secondaryCta={{ label: "Explore Workforce Solutions", to: "/solutions/workforce-solutions" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">TALENT AGILITY</p>
-                <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">TALENT AGILITY</p>
+                </div>
+                <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl">
                   Sourcing Excellence Across Demanding Technical Roles
                 </h2>
 
@@ -1569,7 +1577,7 @@ export function ITStaffingView() {
                   <h3 className="font-display text-xl font-bold text-primary">Our Staffing Capabilities</h3>
                   <div className="mt-4 space-y-3">
                     {capabilities.map((cap) => (
-                      <div key={cap.title} className="rounded-sm border border-border bg-card p-4 shadow-sm">
+                      <div key={cap.title} className="rounded-xl border border-border bg-card p-5 shadow-xs hover:border-gold hover:shadow-md transition-all border-l-4 border-l-gold">
                         <strong className="block text-sm font-semibold text-primary">{cap.title}</strong>
                         <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{cap.desc}</p>
                       </div>
@@ -1579,17 +1587,20 @@ export function ITStaffingView() {
 
                 {/* Our Approach Workflow */}
                 <div className="mt-10">
-                  <h3 className="font-display text-xl font-bold text-primary">Our 5-Step Approach</h3>
-                  <p className="mt-1 text-xs text-muted-foreground">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="h-px w-5 bg-gold" aria-hidden="true" />
+                    <h3 className="font-display text-xl font-bold text-primary">Our 5-Step Approach</h3>
+                  </div>
+                  <p className="text-xs text-muted-foreground mb-4">
                     A disciplined recruitment lifecycle engineered for consistency and compliance.
                   </p>
-                  <div className="mt-4 space-y-3">
+                  <div className="space-y-3">
                     {steps.map((st) => (
-                      <div key={st.num} className="flex items-start gap-3 border-l-2 border-gold pl-4 py-1">
-                        <span className="font-mono text-xs font-bold text-gold">{st.num}</span>
+                      <div key={st.num} className="flex items-start gap-3.5 rounded-lg border border-border bg-card/60 p-3.5">
+                        <span className="font-mono text-xs font-bold text-gold px-2 py-0.5 rounded bg-gold/15 shrink-0 mt-0.5">{st.num}</span>
                         <div>
                           <strong className="block text-sm font-semibold text-primary">{st.label}</strong>
-                          <p className="text-xs text-muted-foreground">{st.desc}</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">{st.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -1652,14 +1663,18 @@ export function WorkforceSolutionsView() {
           image="workforce"
           primaryCta={{ label: "Discuss Workforce Requirements", to: "/contact" }}
           secondaryCta={{ label: "View MSP & VMS Programs", to: "/solutions/msp-vms" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">ADAPTIVE ENGAGEMENT</p>
-                <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">ADAPTIVE ENGAGEMENT</p>
+                </div>
+                <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl">
                   Scalable Workforce Delivery Tailored to Business Demands
                 </h2>
 
@@ -1674,7 +1689,7 @@ export function WorkforceSolutionsView() {
 
                 <div className="mt-8 space-y-4">
                   {models.map((m) => (
-                    <div key={m.title} className="rounded-sm border border-border bg-card p-5 shadow-sm">
+                    <div key={m.title} className="rounded-xl border border-border bg-card p-5 shadow-xs hover:border-gold hover:shadow-md transition-all border-l-4 border-l-gold">
                       <h3 className="text-sm font-bold text-primary">{m.title}</h3>
                       <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
                     </div>
@@ -1734,13 +1749,17 @@ export function MSPView() {
           image="msp"
           primaryCta={{ label: "Discuss MSP Workforce Requirements", to: "/contact" }}
           secondaryCta={{ label: "Why ConfigUSA", to: "/why-configusa" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">PROGRAM DISCIPLINE</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">PROGRAM DISCIPLINE</p>
+                </div>
                 <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
                   Built for Enterprise Workforce Expectations
                 </h2>
@@ -1756,17 +1775,17 @@ export function MSPView() {
 
                 <div className="mt-8">
                   <h3 className="font-display text-xl font-bold text-primary">Core Capabilities</h3>
-                  <div className="mt-4 space-y-2.5">
+                  <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
                     {capabilities.map((cap) => (
-                      <div key={cap} className="flex items-start gap-3 border-b border-border/70 pb-2.5 text-xs sm:text-sm text-foreground/90">
-                        <CheckCircle2 className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+                      <div key={cap} className="flex items-start gap-2.5 rounded-xl border border-border bg-card p-4 text-xs sm:text-sm font-semibold text-primary shadow-xs hover:border-gold hover:shadow-sm transition-all border-l-4 border-l-gold">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
                         <span>{cap}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-8 rounded-sm border border-border bg-card p-6 shadow-sm">
+                <div className="mt-8 rounded-xl border border-border bg-card p-6 shadow-sm border-t-4 border-t-primary">
                   <h4 className="font-display text-base font-bold text-primary">Delivery Discipline in Practice</h4>
                   <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">
                     We recognize that successful MSP delivery depends on more than individual placements. It requires dependable processes, professional coordination, and a commitment to meeting the standards established by each client and program.
@@ -1834,14 +1853,18 @@ export function TechnologyConsultingView() {
           image="consulting"
           primaryCta={{ label: "Explore Technology Expertise", to: "/contact" }}
           secondaryCta={{ label: "SAP Solutions", to: "/expertise/sap" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">RESOURCE AUGMENTATION</p>
-                <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">RESOURCE AUGMENTATION</p>
+                </div>
+                <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl">
                   Strengthening Teams for Complex Implementations
                 </h2>
 
@@ -1858,8 +1881,8 @@ export function TechnologyConsultingView() {
                   <h3 className="font-display text-xl font-bold text-primary">Areas of Support</h3>
                   <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
                     {areas.map((area) => (
-                      <div key={area} className="flex items-center gap-2.5 rounded-sm border border-border bg-card p-3.5 text-xs sm:text-sm font-medium text-foreground">
-                        <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
+                      <div key={area} className="flex items-center gap-2.5 rounded-xl border border-border bg-card p-4 text-xs sm:text-sm font-semibold text-primary shadow-xs hover:border-gold hover:shadow-sm transition-all border-l-4 border-l-gold">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
                         <span>{area}</span>
                       </div>
                     ))}
@@ -2120,13 +2143,17 @@ export function CloudInfrastructureView() {
           image="cloud"
           primaryCta={{ label: "Connect With Infrastructure Talent", to: "/contact" }}
           secondaryCta={{ label: "AI & Digital Engineering", to: "/expertise/ai-data-digital" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">RESILIENT IT ARCHITECTURE</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">RESILIENT IT ARCHITECTURE</p>
+                </div>
                 <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
                   Engineered for Reliability, Security, and Scale
                 </h2>
@@ -2141,7 +2168,7 @@ export function CloudInfrastructureView() {
                 </div>
 
                 {/* Cloud Story Photo */}
-                <div className="mt-6 relative overflow-hidden rounded-lg border border-border shadow-sm bg-slate-900">
+                <div className="mt-6 relative overflow-hidden rounded-xl border border-border shadow-md bg-slate-900">
                   <img
                     src="/assets/story-cloud.jpg"
                     alt="ConfigUSA cloud architects configuring enterprise infrastructure"
@@ -2160,8 +2187,8 @@ export function CloudInfrastructureView() {
                   <h3 className="font-display text-xl font-bold text-primary">Focus Areas</h3>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
                     {focusAreas.map((area) => (
-                      <div key={area} className="flex items-center gap-2.5 rounded-sm border border-border bg-card p-3.5 text-xs sm:text-sm font-semibold text-primary">
-                        <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
+                      <div key={area} className="flex items-center gap-2.5 rounded-xl border border-border bg-card p-4 text-xs sm:text-sm font-semibold text-primary shadow-xs hover:border-gold hover:shadow-sm transition-all border-l-4 border-l-gold">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
                         <span>{area}</span>
                       </div>
                     ))}
@@ -2221,13 +2248,17 @@ export function AIDigitalView() {
           image="ai"
           primaryCta={{ label: "Build Your Digital Technology Team", to: "/contact" }}
           secondaryCta={{ label: "Cloud & Infrastructure", to: "/expertise/cloud-infrastructure" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">EMERGING CAPABILITIES</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">EMERGING CAPABILITIES</p>
+                </div>
                 <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
                   Translating Technological Innovation Into Business Value
                 </h2>
@@ -2243,10 +2274,10 @@ export function AIDigitalView() {
 
                 <div className="mt-8">
                   <h3 className="font-display text-xl font-bold text-primary">Expertise Areas</h3>
-                  <div className="mt-4 space-y-2.5">
+                  <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
                     {expertiseAreas.map((exp) => (
-                      <div key={exp} className="flex items-center gap-2.5 rounded-sm border border-border bg-card p-3.5 text-xs sm:text-sm font-semibold text-primary">
-                        <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
+                      <div key={exp} className="flex items-center gap-2.5 rounded-xl border border-border bg-card p-4 text-xs sm:text-sm font-semibold text-primary shadow-xs hover:border-gold hover:shadow-sm transition-all border-l-4 border-l-gold">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
                         <span>{exp}</span>
                       </div>
                     ))}
@@ -2302,12 +2333,16 @@ export function IndustriesView() {
           image="industry"
           primaryCta={{ label: "Discuss Your Industry Requirements", to: "/contact" }}
           secondaryCta={{ label: "Explore Our Solutions", to: "/solutions/it-staffing" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">SECTOR FOCUS</p>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">SECTOR FOCUS</p>
+              </div>
               <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
                 Domain-Aligned Talent for Specialized Environments
               </h2>
@@ -2321,7 +2356,7 @@ export function IndustriesView() {
                 <div
                   key={ind.id}
                   id={ind.id}
-                  className="scroll-mt-24 rounded-sm border border-border bg-card p-6 sm:p-9 shadow-sm"
+                  className="scroll-mt-24 rounded-xl border border-border bg-card p-6 sm:p-9 shadow-sm border-t-4 border-t-gold hover:shadow-md transition-all"
                 >
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-border pb-5">
                     <div>
@@ -2343,7 +2378,7 @@ export function IndustriesView() {
                   </div>
 
                   <div className="mt-6 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-                    <div className="relative min-h-[220px] sm:min-h-[260px] h-full overflow-hidden rounded-lg border border-border shadow-sm bg-slate-900">
+                    <div className="relative min-h-[220px] sm:min-h-[260px] h-full overflow-hidden rounded-xl border border-border shadow-md bg-slate-900">
                       <img
                         src={ind.image}
                         alt={`${ind.name} enterprise technology operations`}
@@ -2426,12 +2461,16 @@ export function GlobalPresenceView() {
           image="global"
           primaryCta={{ label: "Connect With Our Global Team", to: "/contact" }}
           secondaryCta={{ label: "Careers in Global Markets", to: "/careers" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner · Est. 2013"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">CROSS-MARKET REACH</p>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">CROSS-MARKET REACH</p>
+              </div>
               <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
                 United States · India · Canada
               </h2>
@@ -2449,7 +2488,7 @@ export function GlobalPresenceView() {
               {globalHubs.map((hub) => (
                 <div
                   key={hub.country}
-                  className="rounded-sm border border-border bg-card p-6 sm:p-7 shadow-sm flex flex-col justify-between"
+                  className="rounded-xl border border-border bg-card p-6 sm:p-7 shadow-sm flex flex-col justify-between border-t-4 border-t-gold hover:shadow-md transition-all"
                 >
                   <div>
                     <div className="flex items-center justify-between border-b border-border pb-3">
@@ -2543,13 +2582,17 @@ export function CareersView() {
           image="careers"
           primaryCta={{ label: "Search Open Positions", to: "/careers#open-positions" }}
           secondaryCta={{ label: "Submit Your Resume", to: "/careers#submit-resume" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
           <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">TALENT COMMUNITY</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">TALENT COMMUNITY</p>
+                </div>
                 <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
                   Connect With High-Impact Enterprise Projects
                 </h2>
@@ -2660,6 +2703,7 @@ export function ContactView() {
           image="contact"
           primaryCta={{ label: "Request Talent Immediately", to: "/contact#form" }}
           secondaryCta={{ label: "Explore Global Offices", to: "/global-presence" }}
+          badgeText="Enterprise Technology, Workforce & Managed Delivery Partner · Est. 2013"
         />
 
         <section className="py-10 sm:py-14 lg:py-16">
@@ -2667,7 +2711,10 @@ export function ContactView() {
             <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
               {/* Left Column: Context & Contact Details */}
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">DIRECT ENGAGEMENT</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="h-px w-7 bg-gold" aria-hidden="true" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-brand">DIRECT ENGAGEMENT</p>
+                </div>
                 <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
                   Tell Us What You're Looking to Achieve
                 </h2>
@@ -2678,7 +2725,7 @@ export function ContactView() {
 
                 <div className="mt-8 space-y-6">
                   {/* US Desk */}
-                  <div className="rounded-sm border border-border bg-card p-5 shadow-sm">
+                  <div className="rounded-xl border border-border bg-card p-5 sm:p-6 shadow-sm border-l-4 border-l-gold hover:shadow-md transition-all">
                     <span className="text-xs font-semibold uppercase text-gold">United States (Global Headquarters)</span>
                     <h3 className="mt-1 font-display text-lg font-bold text-primary">ConfigUSA (Global Headquarters)</h3>
                     <p className="mt-2 text-xs text-muted-foreground">666 Plainsboro Road, Suite 1237, Plainsboro, NJ 08536, United States</p>
@@ -2687,7 +2734,7 @@ export function ContactView() {
                   </div>
 
                   {/* Canada Desk */}
-                  <div className="rounded-sm border border-border bg-card p-5 shadow-sm">
+                  <div className="rounded-xl border border-border bg-card p-5 sm:p-6 shadow-sm border-l-4 border-l-gold hover:shadow-md transition-all">
                     <span className="text-xs font-semibold uppercase text-gold">Canada (Canada Office)</span>
                     <h3 className="mt-1 font-display text-lg font-bold text-primary">ConfigUSA (Canada Office)</h3>
                     <p className="mt-2 text-xs text-muted-foreground">1585 Markham Road, Suite # 309, Toronto, ON M1B 2W1, Canada</p>
@@ -2696,7 +2743,7 @@ export function ContactView() {
                   </div>
 
                   {/* India Desk */}
-                  <div className="rounded-sm border border-border bg-card p-5 shadow-sm">
+                  <div className="rounded-xl border border-border bg-card p-5 sm:p-6 shadow-sm border-l-4 border-l-gold hover:shadow-md transition-all">
                     <span className="text-xs font-semibold uppercase text-gold">India (India Delivery Center)</span>
                     <h3 className="mt-1 font-display text-lg font-bold text-primary">ConfigUSA (India Delivery Center)</h3>
                     <p className="mt-2 text-xs text-muted-foreground">Trendz Sapphire, 3rd Floor, Flat No. 1-99/V/2, Vittal Rao Nagar, Madhapur, Hitech City, Hyderabad – 500081, Telangana, India</p>
